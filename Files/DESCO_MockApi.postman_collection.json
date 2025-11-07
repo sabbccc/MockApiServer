@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "DESCO Mock API",
+    "_postman_id": "9a1f1d5d-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "description": "Postman collection for testing DESCO mock API endpoints with success & error scenarios.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. User Authentication",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "X-Mock-Scenario", "value": "default" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"your_username\",\n  \"password\": \"your_password\"\n}"
+        },
+        "url": {
+          "raw": "https://127.0.0.1:5006/billpayment/global/auth/signin",
+          "protocol": "https",
+          "host": ["127.0.0.1"],
+          "port": "5006",
+          "path": ["billpayment", "global", "auth", "signin"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Get Bill Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "X-Mock-Scenario", "value": "default" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"billNo\": \"021737204495\"\n}"
+        },
+        "url": {
+          "raw": "https://127.0.0.1:5006/billpayment/global/billvendor/billInfo",
+          "protocol": "https",
+          "host": ["127.0.0.1"],
+          "port": "5006",
+          "path": ["billpayment", "global", "billvendor", "billInfo"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Submit Payment Info",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "X-Mock-Scenario", "value": "default" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"billNumber\": \"012031291311\",\n  \"billToken\": \"hAWLBRxNtIuX\",\n  \"transactionId\": \"20111301039477121\",\n  \"bankCode\": \"AB\",\n  \"scrollNo\": \"00131\",\n  \"totalPayableAmount\": 56.00,\n  \"totalPaidAmount\": 56.00,\n  \"lpc\": 0.00,\n  \"paid\": 1,\n  \"issueDate\": \"23-01-2020\",\n  \"dueDate\": \"23-02-2020\",\n  \"cTariff\": \"LT-A\",\n  \"departmentCode\": \"13\",\n  \"paymentAmount\": 56.0,\n  \"paymentVatAmount\": 3.0,\n  \"paymentDate\": \"04-05-2021\",\n  \"trackingNo\": \"\",\n  \"stampQty\": 0,\n  \"transactionTrackingNo\": \"\",\n  \"tranAccount\": \"95000534\",\n  \"transactionDateTime\": \"04-05-2021 15:38:34\"\n}"
+        },
+        "url": {
+          "raw": "https://127.0.0.1:5006/billpayment/global/billvendor/paymentInfo",
+          "protocol": "https",
+          "host": ["127.0.0.1"],
+          "port": "5006",
+          "path": ["billpayment", "global", "billvendor", "paymentInfo"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "accessToken",
+      "value": "eyFakeTokenFromSignin"
+    }
+  ]
+}

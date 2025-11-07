@@ -1,0 +1,66 @@
+﻿@using MockApiServer.Models.ViewModels
+@model DashboardViewModel
+
+@{
+    ViewData["Title"] = "Mock API Server";
+    Layout = "_Layout";
+}
+
+<div class="card-body">
+    <div class="row g-3">
+
+        <!-- Applications Card -->
+        <div class="col-12 col-md-4">
+            <div class="stat-card card-bg-primary shadow-sm p-4 rounded-3 d-flex justify-content-between align-items-center border-0"
+                 data-aos="fade-down" data-aos-delay="600">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-app-indicator fs-2 text-primary"></i>
+                    <h6 class="fw-semibold text-primary mb-0">Applications</h6>
+                </div>
+                <div class="text-end">
+                    <h2 class="fw-bold text-primary mb-1 counter">
+                        @((Model.ApplicationViewModels != null && Model.ApplicationViewModels.Count() != 0) ?
+                                                Model.ApplicationViewModels.Count().ToString() : "0")
+                    </h2>
+                    <small class="fw-medium text-primary text-opacity-75">Total Count</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mocks Card -->
+        <div class="col-12 col-md-4">
+            <div class="stat-card card-bg-info shadow-sm p-4 rounded-3 d-flex justify-content-between align-items-center border-0"
+                 data-aos="fade-down" data-aos-delay="600">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-braces fs-2 text-info"></i>
+                    <h6 class="fw-semibold text-info mb-0">Mocks</h6>
+                </div>
+                <div class="text-end">
+                    <h2 class="fw-bold text-info mb-1 counter">
+                        @((Model.MockViewModels != null && Model.MockViewModels.Count() != 0) ?
+                                                Model.MockViewModels.Count().ToString() : "0")
+                    </h2>
+                    <small class="fw-medium text-info text-opacity-75">Total Count</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scenarios Card -->
+        <div class="col-12 col-md-4">
+            <div class="stat-card card-bg-success shadow-sm p-4 rounded-3 d-flex justify-content-between align-items-center border-0"
+                 data-aos="fade-down" data-aos-delay="600">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-diagram-3 fs-2 text-success"></i>
+                    <h6 class="fw-semibold text-success mb-0">Scenarios</h6>
+                </div>
+                <div class="text-end">
+                    <h2 class="fw-bold text-success mb-1 counter">
+                        @((Model.MockScenarioViewModels != null && Model.MockScenarioViewModels.Count() != 0) ?
+                                                Model.MockScenarioViewModels.Count().ToString() : "0")
+                    </h2>
+                    <small class="fw-medium text-success text-opacity-75">Total Count</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+﻿@using MockApiServer.Models.ViewModels
+@model List<MockScenarioViewModel>
+
+<div class="table-responsive">
+    <table id="mockScenariosTable"
+           class="table table-striped align-middle text-start"
+           role="grid">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Scenario Key</th>
+                <th>Status Code</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach (var s in Model)
+                {
+                    <tr>
+                        <td>@s.Id</td>
+                        <td>@s.ScenarioKey</td>
+                        <td>@s.StatusCode</td>
+                        <td>
+                            @if ((bool)s.IsActive)
+                            {
+                                <span class="badge bg-success">Active</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">Inactive</span>
+                            }
+                        </td>
+                        <td>
+                            <button type="button"
+                                    class="btn btn-sm btn-icon btn-soft-gray me-1 btn-edit-scenario"
+                                    data-id="@s.Id"
+                                    data-bs-toggle="tooltip"
+                                    title="Edit">
+                                <i class="bi bi-pencil me-1"></i>
+                            </button>
+
+                            <a asp-action="Delete"
+                               asp-route-id="@s.Id"
+                               class="btn btn-sm btn-icon btn-soft-danger"
+                               data-bs-toggle="tooltip"
+                               title="Delete">
+                                <i class="bi bi-trash me-1"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+</div>

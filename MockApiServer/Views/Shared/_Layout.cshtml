@@ -1,0 +1,289 @@
+﻿@{
+    var title = ViewData["Title"] ?? "Mock API Server";
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "Home";
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? "Index";
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Critical Dark Mode Script - Prevents Flash -->
+    <script>
+        // Immediately set dark mode before any rendering
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (!theme) {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+        })();
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@title</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/assets/images/favicon.ico" />
+
+    <!-- Library / Plugin Css Build -->
+    <link rel="stylesheet" href="~/assets/css/core/libs.min.css" />
+    <!-- Aos Animation Css -->
+    <link rel="stylesheet" href="~/assets/vendor/aos/dist/aos.css" />
+
+    <!-- Hope Ui Design System Css -->
+    <link rel="stylesheet" href="~/assets/css/hope-ui.min.css?v=2.0.0" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="~/assets/css/custom.min.css?v=2.0.0" />
+
+    <!-- Dark Css -->
+    <link rel="stylesheet" href="~/assets/css/dark.min.css" />
+
+    <!-- Customizer Css -->
+    <link rel="stylesheet" href="~/assets/css/customizer.min.css" />
+
+    <!-- RTL Css -->
+    <link rel="stylesheet" href="~/assets/css/rtl.min.css" />
+
+    <!-- Bottstrap Icon Css -->
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Fontawesome Icon Css -->
+    <link href="~/lib/fontawesome-icons/all.min.css" rel="stylesheet" />
+
+    <!-- DataTables Core -->
+    <link href="~/lib/data-tables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/data-tables/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <!-- Buttons Extension -->
+    <link href="~/lib/data-tables/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/data-tables/css/buttons.bootstrap5.min.css" rel="stylesheet" />
+
+    <link href="~/assets/css/custom.css" rel="stylesheet" />
+    <link href="~/assets/css/dark.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+    <!-- Loader -->
+    @await Html.PartialAsync("_Loader")
+
+    <!-- Sidebar -->
+    @await Html.PartialAsync("_Sidebar")
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="position-relative iq-banner">
+            @await Html.PartialAsync("_Navbar")
+        </div>
+
+        <div class="container-fluid px-0 py-0 content-wrapper">
+            <section class="main-wrapper d-flex justify-content-center align-items-start">
+                <div class="card content-card shadow-lg text-center w-100">
+
+                    @if (controller != "Home")
+                    {
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <label class="mb-0 text-white">@ViewData["Title"]</label>
+                            <nav aria-label="breadcrumb mb-0 pb-0">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item">
+                                        <a class="text-white" href="@Url.Action("Index", controller)">
+                                            @controller
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumb-item active text-white" aria-current="page">@action</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    }
+                    @RenderBody()
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    @await Html.PartialAsync("_Footer")
+    @await Html.PartialAsync("_Toasters")
+    <!-- SCRIPTS -->
+    <!-- jQuery first -->
+    <script src="~/lib/jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- Theme Core Libraries -->
+    <script src="~/assets/js/core/libs.min.js"></script>
+    <script src="~/assets/js/core/external.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="~/lib/data-tables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/data-tables/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Buttons -->
+    <script src="~/lib/data-tables/js/dataTables.buttons.min.js"></script>
+    <script src="~/lib/data-tables/js/buttons.bootstrap5.min.js"></script>
+    <script src="~/lib/data-tables/js/buttons.html5.min.js"></script>
+    <script src="~/lib/data-tables/js/buttons.print.min.js"></script>
+
+    <!-- Export Dependencies -->
+    <script src="~/lib/file-gen/jszip.min.js"></script>
+    <script src="~/lib/file-gen/pdfmake.min.js"></script>
+    <script src="~/lib/file-gen/vfs_fonts.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="~/assets/vendor/aos/dist/aos.js"></script>
+
+    <!-- Theme Scripts -->
+    <script src="~/assets/js/plugins/fslightbox.js"></script>
+    <script src="~/assets/js/plugins/setting.js"></script>
+    <script src="~/assets/js/plugins/slider-tabs.js"></script>
+    <script src="~/assets/js/plugins/form-wizard.js"></script>
+    <script src="~/assets/js/charts/chart.js"></script>
+    <script src="~/assets/js/charts/widgetcharts.js"></script>
+    <script src="~/assets/js/charts/vectore-chart.js"></script>
+    <script src="~/assets/js/charts/dashboard.js"></script>
+    <script src="~/assets/js/hope-ui.js" defer></script>
+
+    <!-- Loader Script -->
+    <script>
+        // Hide loader on full page load
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loading');
+            if (loader) {
+                setTimeout(() => loader.style.display = 'none', 300);
+            }
+        });
+
+        // Handle browser Back/Forward navigation (BFCache)
+        window.addEventListener('pageshow', function (event) {
+            const loader = document.getElementById('loading');
+            if (loader) {
+                loader.style.display = 'none';
+            }
+        });
+
+        // Show loader on every AJAX start
+        $(document).ajaxStart(function () {
+            $('#loading').fadeIn(200);
+        });
+
+        // Hide loader on AJAX complete
+        $(document).ajaxStop(function () {
+            $('#loading').fadeOut(200);
+        });
+
+        // Optional: Hide loader on AJAX error too
+        $(document).ajaxError(function () {
+            $('#loading').fadeOut(200);
+        });
+
+        // Loader on normal page navigation
+        window.addEventListener('beforeunload', function () {
+            $('#loading').fadeIn(200);
+        });
+    </script>
+
+    <!-- Toaster Script -->
+    <script>
+         function showToast(id, message) {
+                if (!message) return;
+                const toast = document.getElementById(id);
+                if (!toast) return;
+
+                const msgSpan = toast.querySelector('span');
+                if (msgSpan) msgSpan.textContent = message;
+
+                // Remove display:none and add Bootstrap 'show' to trigger fade-in
+                toast.style.display = 'block';
+                toast.classList.add('show');
+
+                // Auto-hide after 4 seconds
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.style.display = 'none', 300);
+                }, 4000);
+            };
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Toast script loaded");
+
+            const successMsg = @Html.Raw(Json.Serialize(TempData["success"] ?? ""));
+            const failedMsg = @Html.Raw(Json.Serialize(TempData["failed"] ?? ""));
+            const infoMsg = @Html.Raw(Json.Serialize(TempData["info"] ?? ""));
+            const warningMsg = @Html.Raw(Json.Serialize(TempData["warning"] ?? ""));
+
+
+
+            if (successMsg) showToast('toast-success', successMsg);
+            if (failedMsg) showToast('toast-failed', failedMsg);
+            if (infoMsg) showToast('toast-info', infoMsg);
+            if (warningMsg) showToast('toast-warning', warningMsg);
+        });
+    </script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        (function() {
+            // Initialize dark mode immediately to prevent flash
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+        })();
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            const sidebarDarkModeIcon = document.getElementById('sidebarDarkModeIcon');
+
+            if (currentTheme === 'dark') {
+                [darkModeIcon, sidebarDarkModeIcon].forEach(icon => {
+                    if (icon) {
+                        icon.classList.remove('bi-moon-fill');
+                        icon.classList.add('bi-sun-fill');
+                    }
+                });
+            }
+        });
+
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            const bodyElement = document.body;
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            const sidebarDarkModeIcon = document.getElementById('sidebarDarkModeIcon');
+
+            const isDark = htmlElement.classList.toggle('dark');
+            bodyElement.classList.toggle('dark');
+
+            const icons = [darkModeIcon, sidebarDarkModeIcon].filter(icon => icon);
+
+            if (isDark) {
+                icons.forEach(icon => {
+                    icon.classList.remove('bi-moon-fill');
+                    icon.classList.add('bi-sun-fill');
+                });
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icons.forEach(icon => {
+                    icon.classList.remove('bi-sun-fill');
+                    icon.classList.add('bi-moon-fill');
+                });
+                localStorage.setItem('theme', 'light');
+            }
+
+            if ($.fn.DataTable) {
+                $('.dataTable').each(function() {
+                    if ($.fn.DataTable.isDataTable(this)) {
+                        $(this).DataTable().draw();
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+<!-- Your page-specific scripts -->
+@RenderSection("Scripts", required: false)
+@RenderSection("Modals", required: false)
+
+</html>

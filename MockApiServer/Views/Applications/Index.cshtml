@@ -1,0 +1,142 @@
+﻿@using MockApiServer.Models.ViewModels
+@model List<ApplicationViewModel>
+
+@{
+    ViewData["Title"] = "Applications";
+    Layout = "_Layout";
+}
+
+<div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <!-- Modal trigger -->
+        <button id="btnCreateApp"
+                type="button"
+                class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> New Application
+        </button>
+    </div>
+
+    @await Html.PartialAsync("_ViewAll")
+</div>
+
+@section Modals
+{
+<!-- Modal -->
+<div class="modal fade" id="createOrEditApplicationModal"
+     data-bs-backdrop="static"
+     data-bs-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="createOrEditApplicationLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <h5 class="modal-title" id="createOrEditApplicationLabel">Add/Update Application</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="applicationModalBody">
+                <!-- AJAX content will load here -->
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTable
+            $('#mockApplicationsTable').DataTable({
+                pageLength: 10,
+                pagingType: 'numbers',
+                lengthChange: true,
+                ordering: true,
+                responsive: true,
+                destroy: true,
+                dom:'<"row mb-2"' +
+                    '<"col-12 col-md-6 d-flex align-items-center"B>' +
+                    '<"col-12 col-md-6 d-flex align-items-center justify-content-end"f>' +
+                    '>rtip',
+                buttons: [
+                    { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                ]
+            });
+
+            // Create button handler
+            $('#btnCreateApp').on('click', function () {
+                $('#createOrEditApplicationLabel').text('Add Application');
+                $.get('/Applications/Create', function (html) {
+                    $('#applicationModalBody').html(html);
+                    $('#createOrEditApplicationModal').modal('show');
+                });
+            });
+
+            // Edit button handler
+            $(document).on('click', '.btn-edit-app', function () {
+                const id = $(this).data('id');
+                $('#createOrEditApplicationLabel').text('Edit Application');
+                $.get('/Applications/Edit/' + id, function (html) {
+                    $('#applicationModalBody').html(html);
+                    $('#createOrEditApplicationModal').modal('show');
+                });
+            });
+
+            // Reset modal on close
+            $('#createOrEditApplicationModal').on('hidden.bs.modal', function () {
+                $('#applicationModalBody').empty();
+            });
+
+            // AJAX form submission for create/edit
+            $(document).on('submit', 'form#createApplicationForm, form#editApplicationForm', function (e) {
+                e.preventDefault();
+                const form = $(this);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    data: form.serialize(),
+                    success: function (res) {
+                        $('#createOrEditApplicationModal').modal('hide');
+                        if (res.success) {
+                            showToast('toast-success', res.message);
+
+                            const tableContainer = $('.table-responsive').parent();
+                            tableContainer.html(res.html);
+
+                            // Reinitialize DataTable after replacing HTML
+                            $('#mockApplicationsTable').DataTable({
+                                pageLength: 10,
+                                pagingType: 'numbers',
+                                lengthChange: true,
+                                ordering: true,
+                                responsive: true,
+                                destroy: true,
+                                dom:'<"row mb-2"' +
+                                    '<"col-12 col-md-6 d-flex align-items-center"B>' +
+                                    '<"col-12 col-md-6 d-flex align-items-center justify-content-end"f>' +
+                                    '>rtip',
+                                buttons: [
+                                    { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                                ]
+                            });
+                        } else {
+                            showToast('toast-failed', res.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        $('#applicationModalBody').html(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

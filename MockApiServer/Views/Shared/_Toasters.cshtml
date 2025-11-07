@@ -1,0 +1,160 @@
+﻿<!-- Style CSS --> 
+<style>
+    .alert-bottom {
+        position: relative;
+        border: none;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        padding: 1rem 2rem 1rem 1rem;
+    }
+
+    /* Make the × button match the alert text */
+    .alert .btn-close {
+        position: absolute;
+        top: 45%;
+        right: 0.4rem;
+        transform: translateY(-50%);
+        background: none;
+        opacity: 1;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1;
+        text-shadow: none;
+        border: none;
+        color: inherit; /* match the alert text color */
+        padding: 0; /* remove default clickable padding */
+        margin: 0;
+    }
+
+        /* Remove Bootstrap’s default icon style */
+        .alert .btn-close::before {
+            content: "×";
+            font-family: inherit;
+            font-weight: inherit;
+            color: inherit;
+            font-size: 1.8rem;
+        }
+
+        /* Hide Bootstrap’s default SVG */
+        .alert .btn-close::after {
+            content: none;
+        }
+
+    /* Optional: give text a bit more breathing room */
+    .alert span {
+        display: inline-block;
+        margin-right: 0.5rem; /* space before the close button */
+    }
+
+
+    /* Contextual text colors (strong contrast) */
+    .alert-success {
+        color: #0f5132; /* deep green text */
+        background-color: #d1e7dd;
+    }
+
+    .alert-info {
+        color: #055160; /* deep blue text */
+        background-color: #cff4fc;
+    }
+
+    .alert-warning {
+        color: #664d03; /* dark amber text */
+        background-color: #fff3cd;
+    }
+
+    .alert-danger {
+        color: #842029; /* deep red text */
+        background-color: #f8d7da;
+    }
+
+    /* Progress bar line (same color tone as text) */
+    .alert .progress-bar-line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        transform-origin: right;
+        transition: transform linear;
+    }
+
+    .alert-success .progress-bar-line {
+        background-color: #0f5132;
+    }
+
+    .alert-info .progress-bar-line {
+        background-color: #055160;
+    }
+
+    .alert-warning .progress-bar-line {
+        background-color: #664d03;
+    }
+
+    .alert-danger .progress-bar-line {
+        background-color: #842029;
+    }
+
+    /* Animate the progress line shrinking */
+    .alert.show .progress-bar-line {
+        animation: alertProgress 4s linear forwards;
+    }
+
+    @@keyframes alertProgress {
+        from {
+            transform: scaleX(1);
+        }
+
+        to {
+            transform: scaleX(0);
+        }
+    }
+
+    /* Close button clarity */
+    .alert .btn-close {
+        filter: brightness(0);
+        opacity: 0.6;
+    }
+
+</style>
+
+<!-- Success Alert -->
+<div id="toast-success"
+     class="alert alert-bottom alert-success alert-dismissible fade position-fixed top-0 end-0 m-3 shadow-lg"
+     role="alert"
+     style="z-index:1055; display:none; min-width:280px;">
+    <span></span>
+    <div class="progress-bar-line"></div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Info Alert -->
+<div id="toast-info"
+     class="alert alert-bottom alert-info alert-dismissible fade position-fixed top-0 end-0 m-3 shadow-lg"
+     role="alert"
+     style="z-index:1055; display:none; min-width:280px;">
+    <span></span>
+    <div class="progress-bar-line"></div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Warning Alert -->
+<div id="toast-warning"
+     class="alert alert-bottom alert-warning alert-dismissible fade position-fixed top-0 end-0 m-3 shadow-lg"
+     role="alert"
+     style="z-index:1055; display:none; min-width:280px;">
+    <span></span>
+    <div class="progress-bar-line"></div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Error Alert -->
+<div id="toast-failed"
+     class="alert alert-bottom alert-danger alert-dismissible fade position-fixed top-0 end-0 m-3 shadow-lg"
+     role="alert"
+     style="z-index:1055; display:none; min-width:280px;">
+    <span></span>
+    <div class="progress-bar-line"></div>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+

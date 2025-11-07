@@ -1,0 +1,68 @@
+﻿@using MockApiServer.Models.ViewModels
+@model List<MockViewModel>
+
+<div class="table-responsive">
+    <table id="mocksTable"
+           class="table table-striped align-middle text-start"
+           role="grid">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Application</th>
+                <th>Path</th>
+                <th>Method</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.ApplicationName</td>
+                    <td><code>@item.Path</code></td>
+                    <td>@item.Method</td>
+                    <td>
+                        @if ((bool)item.IsActive)
+                        {
+                            <span class="badge bg-success">Active</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Inactive</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-controller="MockScenarios"
+                           asp-action="Index"
+                           asp-route-mockId="@item.Id"
+                           class="btn btn-sm btn-icon btn-soft-success me-1"
+                           data-bs-toggle="tooltip"
+                           title="Scenarios">
+                            <i class="bi bi-list-ul me-1"></i> Scenarios
+                        </a>
+
+                        <button type="button"
+                                class="btn btn-sm btn-icon btn-soft-gray me-1 btn-edit-mock"
+                                data-id="@item.Id"
+                                data-bs-toggle="tooltip"
+                                title="Edit">
+                            <i class="bi bi-pencil me-1"></i>
+                        </button>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           class="btn btn-sm btn-icon btn-soft-danger"
+                           data-bs-toggle="tooltip"
+                           title="Delete">
+                            <i class="bi bi-trash me-1"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

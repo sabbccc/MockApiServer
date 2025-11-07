@@ -1,0 +1,2043 @@
+2025-09-27 20:38:07.256 +06:00 [WRN] () PID:30428 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 20:38:07.369 +06:00 [WRN] () PID:30428 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 20:40:12.271 +06:00 [WRN] () PID:34308 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 20:40:12.337 +06:00 [WRN] () PID:34308 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 20:43:05.524 +06:00 [WRN] () The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 20:43:05.574 +06:00 [WRN] () Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 20:43:07.172 +06:00 [INF] () ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-4a4924c1772355a0e7d8dd8b74fd1c3f-ffa7bf5e4ae47943-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQGLJHOAP:00000001","RequestPath":"/","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:43:07.927 +06:00 [INF] () ⬅️ Response 400 | Body: {"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"errors":{"path":["The path field is required."]},"traceId":"00-4a4924c1772355a0e7d8dd8b74fd1c3f-ffa7bf5e4ae47943-00"} {"RequestId":"0HNFTQGLJHOAP:00000001","RequestPath":"/","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:43:07.994 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-7ec0fbf9ba1965a6e36796e3378681e8-c067ff42c34dfabe-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQGLJHOAP:00000002","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:43:08.049 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQGLJHOAP:00000002","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:44:03.311 +06:00 [INF] () ➡️ Request GET /Home/index | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-cc866365ad32c5b48584c3b8c095c3af-889f6e4fd23c5587-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQGLJHOAP:00000003","RequestPath":"/Home/index","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:44:03.353 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQGLJHOAP:00000003","RequestPath":"/Home/index","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:44:03.395 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/Home/index"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-7046111f2ba0a45b78e2f40564b4eed7-f95b6d16e275062a-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQGLJHOAP:00000004","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:44:03.438 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQGLJHOAP:00000004","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:44:14.307 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-9035fb0e6e5f6935c8edb4f01ff3af04-2eb70b36d4c2397f-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQGLJHOAP:00000005","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:44:14.346 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQGLJHOAP:00000005","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQGLJHOAP"}
+2025-09-27 20:46:55.917 +06:00 [WRN] () The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 20:46:55.975 +06:00 [WRN] () Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 20:46:57.347 +06:00 [INF] () ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-0eb164617da75a2064a9f8d3b1a4741a-100b1c9809c7286e-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQIQ9LLUA:00000001","RequestPath":"/","ConnectionId":"0HNFTQIQ9LLUA"}
+2025-09-27 20:46:57.409 +06:00 [ERR] () The view 'Index' was not found. Searched locations: ["/Views/Home/Index.cshtml","/Views/Shared/Index.cshtml"] {"EventId":{"Id":3,"Name":"ViewNotFound"},"SourceContext":"Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor","ActionId":"c0d3cb13-2151-4ce7-a988-15996496c42a","ActionName":"MockApiServer.Controllers.HomeController.Index (MockApiServer)","RequestId":"0HNFTQIQ9LLUA:00000001","RequestPath":"/","ConnectionId":"0HNFTQIQ9LLUA"}
+2025-09-27 20:46:57.461 +06:00 [ERR] () Connection id "0HNFTQIQ9LLUA", Request id "0HNFTQIQ9LLUA:00000001": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQIQ9LLUA:00000001","RequestPath":"/"}
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Views/Home/Index.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 20:48:46.242 +06:00 [WRN] () The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 20:48:46.296 +06:00 [WRN] () Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 20:48:47.481 +06:00 [INF] () ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-a79610a69e9b54f342e74984dde10ba7-fe2e17fa6c7817ac-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQC:00000001","RequestPath":"/","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:48:47.570 +06:00 [INF] () ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTQJR7MLQC:00000001","RequestPath":"/","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:48:47.681 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-212b176f59ccc2b18ddac4e20045d6a0-e3d624656bc17c10-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQC:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:48:47.898 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQJR7MLQC:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:48:49.945 +06:00 [INF] () ➡️ Request GET /swagger/v1/swagger.json | Headers: [{"Key":"Accept","Value":["application/json,*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/swagger/index.html"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["empty"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-db03ca822fe1311c7e9aafb9bbb3e83a-bec082d7c6641019-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQD:00000003","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:49.980 +06:00 [INF] () ⬅️ Response 404 | Body:  {"RequestId":"0HNFTQJR7MLQD:00000003","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:57.446 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-6497456e18ab91070693e58a9befc74a-68c8a7a172396169-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQD:00000005","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:57.492 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQJR7MLQD:00000005","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:59.130 +06:00 [INF] () ➡️ Request GET /health | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-bcba32079499e6adabdd0cd169f539f6-a71c9cd35bc1a6f6-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQD:00000006","RequestPath":"/health","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:59.168 +06:00 [INF] () ⬅️ Response 200 | Body: Healthy {"RequestId":"0HNFTQJR7MLQD:00000006","RequestPath":"/health","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:59.208 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/health"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-a3584db30cd35e3d6d64da5b07560d90-3336ab7a95511e94-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQD:00000007","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:48:59.255 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQJR7MLQD:00000007","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:49:00.688 +06:00 [INF] () ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-0d66a05aefcca294abdb3700fc4813bd-4a257c85c067ab47-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQD:00000009","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:49:00.728 +06:00 [INF] () ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQJR7MLQD:00000009","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQJR7MLQD"}
+2025-09-27 20:49:02.313 +06:00 [INF] () ➡️ Request GET /swagger/v1/swagger.json | Headers: [{"Key":"Accept","Value":["application/json,*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/swagger/index.html"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["empty"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-52163dc6b4caad1340ffb9438a98c1d8-16d54bcbb7f1bfa7-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQC:00000006","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:49:02.352 +06:00 [INF] () ⬅️ Response 404 | Body:  {"RequestId":"0HNFTQJR7MLQC:00000006","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:50:10.375 +06:00 [INF] () ➡️ Request GET /swagger/v1/swagger.json | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["cross-site"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-c385662637b97fdac7c8b89ea3685e56-f39a7c25a69f13fa-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQJR7MLQC:00000007","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:50:10.412 +06:00 [INF] () ⬅️ Response 404 | Body:  {"RequestId":"0HNFTQJR7MLQC:00000007","RequestPath":"/swagger/v1/swagger.json","ConnectionId":"0HNFTQJR7MLQC"}
+2025-09-27 20:51:34.683 +06:00 [WRN] () PID:24360 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 20:51:34.747 +06:00 [WRN] () PID:24360 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 20:51:35.452 +06:00 [INF] () PID:24360 ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-29f4676834776babaac4228319fb6cf5-e8adceaeb6a77869-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQLDBE30V:00000001","RequestPath":"/","ConnectionId":"0HNFTQLDBE30V"}
+2025-09-27 20:51:35.522 +06:00 [INF] () PID:24360 ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTQLDBE30V:00000001","RequestPath":"/","ConnectionId":"0HNFTQLDBE30V"}
+2025-09-27 20:51:35.634 +06:00 [INF] () PID:24360 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-a1f6064457b79f6cbf52ba5319ec2db5-c1bb047df4996212-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQLDBE30V:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQLDBE30V"}
+2025-09-27 20:51:35.879 +06:00 [INF] () PID:24360 ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQLDBE30V:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQLDBE30V"}
+2025-09-27 20:51:40.168 +06:00 [INF] () PID:24360 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-cee42893b1d579de46c44cd746bebf52-f6209f6df022c4b7-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQLDBE310:00000005","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQLDBE310"}
+2025-09-27 20:51:40.216 +06:00 [INF] () PID:24360 ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQLDBE310:00000005","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQLDBE310"}
+2025-09-27 20:52:45.471 +06:00 [INF] () PID:24360 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["invalid-username"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["fe8c4a3c-556e-4b3a-9a22-ca623dfcccb6"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-c3774dcc36834a3522d7158f99039701-7dcccbcbc1ea9dce-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQLDBE312:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQLDBE312"}
+2025-09-27 20:52:47.125 +06:00 [INF] () PID:24360 ⬅️ Response 301 | Body: {
+  "status": "failed",
+  "statusCode": "301",
+  "message": "Username is incorrect!"
+} {"ActionId":"8fc30554-5840-4f34-839b-4ceda6ece54b","ActionName":"MockController.HandleAsync (MockApiServer)","RequestId":"0HNFTQLDBE312:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQLDBE312"}
+2025-09-27 20:53:28.931 +06:00 [INF] () PID:24360 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["invalid-username"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["17b7962e-a667-4f03-86a2-d7b861f3d799"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-a79b1e3f14b84cbb0acc91cee0314139-0f59ee3f4b13336b-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQLDBE312:00000002","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQLDBE312"}
+2025-09-27 20:53:51.477 +06:00 [INF] () PID:24360 ⬅️ Response 301 | Body: {
+  "status": "failed",
+  "statusCode": "301",
+  "message": "Username is incorrect!"
+} {"ActionId":"8fc30554-5840-4f34-839b-4ceda6ece54b","ActionName":"MockController.HandleAsync (MockApiServer)","RequestId":"0HNFTQLDBE312:00000002","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQLDBE312"}
+2025-09-27 20:54:22.039 +06:00 [INF] () PID:24360 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["17202a18-d57e-4957-8fa9-fea99f730d63"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-879b2a1d74f7d1121e23089bdd15b615-0527e8cc1878193a-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQLDBE312:00000003","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQLDBE312"}
+2025-09-27 20:54:24.903 +06:00 [INF] () PID:24360 ⬅️ Response 200 | Body: {
+  "username": "username",
+  "status": "ok",
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA",
+  "tokenType": "Bearer"
+} {"ActionId":"8fc30554-5840-4f34-839b-4ceda6ece54b","ActionName":"MockController.HandleAsync (MockApiServer)","RequestId":"0HNFTQLDBE312:00000003","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQLDBE312"}
+2025-09-27 21:01:57.033 +06:00 [WRN] () PID:30780 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 21:01:57.096 +06:00 [WRN] () PID:30780 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 21:01:58.253 +06:00 [INF] () PID:30780 ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-56aef7cc87f340b9f06383cc64b6e825-0b9152ebdfd03067-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQR6SLIC1:00000001","RequestPath":"/","ConnectionId":"0HNFTQR6SLIC1"}
+2025-09-27 21:01:58.312 +06:00 [INF] () PID:30780 ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTQR6SLIC1:00000001","RequestPath":"/","ConnectionId":"0HNFTQR6SLIC1"}
+2025-09-27 21:01:58.405 +06:00 [INF] () PID:30780 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-e478a5b4401f9c3726b1892c36955ffa-ba719db4e8af6f8b-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQR6SLIC1:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQR6SLIC1"}
+2025-09-27 21:01:58.475 +06:00 [ERR] () PID:30780 An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC1:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQR6SLIC1"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:01:58.505 +06:00 [ERR] () PID:30780 An exception was thrown attempting to display the error page. {"EventId":{"Id":3,"Name":"DisplayErrorPageException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC1:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQR6SLIC1"}
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:01:58.512 +06:00 [ERR] () PID:30780 Connection id "0HNFTQR6SLIC1", Request id "0HNFTQR6SLIC1:00000003": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQR6SLIC1:00000003","RequestPath":"/favicon.ico"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 21:02:02.008 +06:00 [INF] () PID:30780 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["9190098f-2b9e-456e-8ee4-e8feab396c87"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-9875833f70d7678220b12a613762eaab-f305c44f4e4e93cf-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQR6SLIC4:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+2025-09-27 21:02:02.050 +06:00 [ERR] () PID:30780 An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:02.058 +06:00 [ERR] () PID:30780 An exception was thrown attempting to display the error page. {"EventId":{"Id":3,"Name":"DisplayErrorPageException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:02.062 +06:00 [ERR] () PID:30780 Connection id "0HNFTQR6SLIC4", Request id "0HNFTQR6SLIC4:00000001": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQR6SLIC4:00000001","RequestPath":"/billpayment/global/auth/signin"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 21:02:06.089 +06:00 [INF] () PID:30780 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["2acb555a-1659-4e33-a56e-aa65a2690bb9"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-8745f987f2ce4b31a2008ae619859bb7-a5bad9f2fc656f27-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQR6SLIC4:00000002","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+2025-09-27 21:02:06.122 +06:00 [ERR] () PID:30780 An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000002","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:06.128 +06:00 [ERR] () PID:30780 An exception was thrown attempting to display the error page. {"EventId":{"Id":3,"Name":"DisplayErrorPageException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000002","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:06.133 +06:00 [ERR] () PID:30780 Connection id "0HNFTQR6SLIC4", Request id "0HNFTQR6SLIC4:00000002": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQR6SLIC4:00000002","RequestPath":"/billpayment/global/auth/signin"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 21:02:07.644 +06:00 [INF] () PID:30780 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["007c3e43-04bc-49c5-a6f9-2d1346a5b77f"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-de9feecf0def52941885d51a4b6da6b0-ab38a4a619b77bac-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQR6SLIC4:00000003","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+2025-09-27 21:02:07.676 +06:00 [ERR] () PID:30780 An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000003","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:07.681 +06:00 [ERR] () PID:30780 An exception was thrown attempting to display the error page. {"EventId":{"Id":3,"Name":"DisplayErrorPageException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000003","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:07.686 +06:00 [ERR] () PID:30780 Connection id "0HNFTQR6SLIC4", Request id "0HNFTQR6SLIC4:00000003": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQR6SLIC4:00000003","RequestPath":"/billpayment/global/auth/signin"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 21:02:36.310 +06:00 [INF] () PID:30780 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["0d2cecb4-1c21-4778-9c9f-d44c7a649980"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-505b952014aa38f4517cb684202f89cd-5cf0594e630a4681-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQR6SLIC4:00000004","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+2025-09-27 21:02:36.343 +06:00 [ERR] () PID:30780 An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000004","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:36.349 +06:00 [ERR] () PID:30780 An exception was thrown attempting to display the error page. {"EventId":{"Id":3,"Name":"DisplayErrorPageException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000004","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:36.353 +06:00 [ERR] () PID:30780 Connection id "0HNFTQR6SLIC4", Request id "0HNFTQR6SLIC4:00000004": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQR6SLIC4:00000004","RequestPath":"/billpayment/global/auth/signin"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 21:02:42.212 +06:00 [INF] () PID:30780 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["8f49825d-8144-40fb-bd51-0da6f162f827"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-652456656a2d66733e6e9ef67a19cb58-f70dd342e4d21759-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQR6SLIC4:00000005","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+2025-09-27 21:02:42.244 +06:00 [ERR] () PID:30780 An unhandled exception has occurred while executing the request. {"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000005","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:42.250 +06:00 [ERR] () PID:30780 An exception was thrown attempting to display the error page. {"EventId":{"Id":3,"Name":"DisplayErrorPageException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HNFTQR6SLIC4:00000005","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQR6SLIC4"}
+System.ObjectDisposedException: Cannot access a closed Stream.
+   at System.IO.MemoryStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.MemoryStream.WriteAsync(ReadOnlyMemory`1 buffer, CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at System.IO.Pipelines.StreamPipeWriter.FlushAsyncInternal(Boolean writeToStream, ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.GetTaskForValueTaskSource(IValueTaskSource`1 t)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.DisplayExceptionContent(ErrorContext errorContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-09-27 21:02:42.254 +06:00 [ERR] () PID:30780 Connection id "0HNFTQR6SLIC4", Request id "0HNFTQR6SLIC4:00000005": An unhandled exception was thrown by the application. {"EventId":{"Id":13,"Name":"ApplicationError"},"SourceContext":"Microsoft.AspNetCore.Server.Kestrel","RequestId":"0HNFTQR6SLIC4:00000005","RequestPath":"/billpayment/global/auth/signin"}
+System.InvalidOperationException: Unable to resolve service for type 'MockApiServer.Services.IMockService' while attempting to activate 'MockController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method16(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at MockApiServer.Middlewares.RequestResponseLoggingMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\RequestResponseLoggingMiddleware.cs:line 34
+   at MockApiServer.Middlewares.CorrelationIdMiddleware.InvokeAsync(HttpContext context) in F:\Projects\Demo\MockApiServer\MockApiServer\Middlewares\CorrelationIdMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-09-27 21:04:10.936 +06:00 [WRN] () PID:9600 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 21:04:11.007 +06:00 [WRN] () PID:9600 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 21:04:11.767 +06:00 [INF] () PID:9600 ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-1d2d972f5ec2260353c78fd8283535f9-9a35e674ad4f2fe4-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQSEOH4HK:00000001","RequestPath":"/","ConnectionId":"0HNFTQSEOH4HK"}
+2025-09-27 21:04:11.826 +06:00 [INF] () PID:9600 ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTQSEOH4HK:00000001","RequestPath":"/","ConnectionId":"0HNFTQSEOH4HK"}
+2025-09-27 21:04:11.930 +06:00 [INF] () PID:9600 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-90282f4d7aeac7f6f8b9d2c21bc5f50a-79ec2fd6fe4af685-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQSEOH4HK:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQSEOH4HK"}
+2025-09-27 21:04:24.975 +06:00 [INF] () PID:9600 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["004e87c5-671f-4c2f-8169-a5706315d5a5"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-7304bfdd804218f4d989a0e76aff7bfd-4c8c7352b4c7e5c0-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQSEOH4HN:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQSEOH4HN"}
+2025-09-27 21:04:42.159 +06:00 [INF] () PID:9600 ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQSEOH4HK:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQSEOH4HK"}
+2025-09-27 21:04:50.966 +06:00 [INF] () PID:9600 ⬅️ Response 200 | Body: {
+  "username": "username",
+  "status": "ok",
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA",
+  "tokenType": "Bearer"
+} {"ActionId":"391db3cf-f46d-458a-b3e1-258d7fe073f9","ActionName":"MockController.HandleAsync (MockApiServer)","RequestId":"0HNFTQSEOH4HN:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQSEOH4HN"}
+2025-09-27 21:05:07.157 +06:00 [WRN] () PID:29580 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 21:05:07.220 +06:00 [WRN] () PID:29580 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 21:05:08.223 +06:00 [INF] () PID:29580 ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-a24223ac21ab64209691a41ea94ce75f-2be765c86e4ce97f-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQSVGK7F8:00000001","RequestPath":"/","ConnectionId":"0HNFTQSVGK7F8"}
+2025-09-27 21:05:08.277 +06:00 [INF] () PID:29580 ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTQSVGK7F8:00000001","RequestPath":"/","ConnectionId":"0HNFTQSVGK7F8"}
+2025-09-27 21:05:08.380 +06:00 [INF] () PID:29580 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-80be7b38d130fd5d91fc63471131779f-dfc0f191ca3418d0-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQSVGK7F8:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQSVGK7F8"}
+2025-09-27 21:05:08.566 +06:00 [INF] () PID:29580 ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQSVGK7F8:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQSVGK7F8"}
+2025-09-27 21:05:21.393 +06:00 [INF] () PID:29580 ➡️ Request POST /billpayment/global/auth/signin | Headers: [{"Key":"Accept","Value":["*/*"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["PostmanRuntime/7.48.0"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br"],"$type":"KeyValuePair`2"},{"Key":"Cache-Control","Value":["no-cache"],"$type":"KeyValuePair`2"},{"Key":"Content-Type","Value":["application/json"],"$type":"KeyValuePair`2"},{"Key":"Content-Length","Value":["24"],"$type":"KeyValuePair`2"},{"Key":"X-Mock-Scenario","Value":["success"],"$type":"KeyValuePair`2"},{"Key":"Postman-Token","Value":["99f702cc-673e-49a9-96af-36acb9e73b51"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-9876e2a7ceeaf4aa3b42fce02d727a12-d2509f4e058aa77f-00"],"$type":"KeyValuePair`2"}] | Body: {
+  "username": "test"
+} {"RequestId":"0HNFTQSVGK7FB:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQSVGK7FB"}
+2025-09-27 21:05:22.029 +06:00 [INF] () PID:29580 ⬅️ Response 200 | Body: {
+  "username": "username",
+  "status": "ok",
+  "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA",
+  "tokenType": "Bearer"
+} {"ActionId":"4c68a59a-d260-4684-a008-033ca0ba052c","ActionName":"MockController.HandleAsync (MockApiServer)","RequestId":"0HNFTQSVGK7FB:00000001","RequestPath":"/billpayment/global/auth/signin","ConnectionId":"0HNFTQSVGK7FB"}
+2025-09-27 21:10:04.166 +06:00 [WRN] () PID:34532 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 21:10:04.231 +06:00 [WRN] () PID:34532 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 21:10:05.444 +06:00 [INF] () PID:34532 ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-89b1df652af62f4af2750207c0da499a-577d482e9a1d8434-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQVO2RAK2:00000001","RequestPath":"/","ConnectionId":"0HNFTQVO2RAK2"}
+2025-09-27 21:10:05.498 +06:00 [INF] () PID:34532 ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTQVO2RAK2:00000001","RequestPath":"/","ConnectionId":"0HNFTQVO2RAK2"}
+2025-09-27 21:10:05.590 +06:00 [INF] () PID:34532 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-9a0752516423adc0d3fb6cc877c85b6a-9dd9b1dcbf5d1894-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTQVO2RAK2:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQVO2RAK2"}
+2025-09-27 21:10:05.769 +06:00 [INF] () PID:34532 ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTQVO2RAK2:00000003","RequestPath":"/favicon.ico","ConnectionId":"0HNFTQVO2RAK2"}
+2025-09-27 21:11:13.756 +06:00 [WRN] () PID:7116 The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable. {"EventId":{"Id":16,"Name":"WebRootPathNotFound"},"SourceContext":"Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware"}
+2025-09-27 21:11:13.816 +06:00 [WRN] () PID:7116 Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead. {"SourceContext":"Microsoft.AspNetCore.Server.Kestrel"}
+2025-09-27 21:11:15.848 +06:00 [INF] () PID:7116 ➡️ Request GET / | Headers: [{"Key":"Accept","Value":["text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Upgrade-Insecure-Requests","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["none"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["navigate"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-User","Value":["?1"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["document"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-3ff487c9bd92d8001877146b0228a18f-77a715124e7e161d-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTR0CQ2D99:00000001","RequestPath":"/","ConnectionId":"0HNFTR0CQ2D99"}
+2025-09-27 21:11:15.905 +06:00 [INF] () PID:7116 ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestId":"0HNFTR0CQ2D99:00000001","RequestPath":"/","ConnectionId":"0HNFTR0CQ2D99"}
+2025-09-27 21:11:16.005 +06:00 [INF] () PID:7116 ➡️ Request GET /favicon.ico | Headers: [{"Key":"Accept","Value":["image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8"],"$type":"KeyValuePair`2"},{"Key":"Connection","Value":["keep-alive"],"$type":"KeyValuePair`2"},{"Key":"Host","Value":["localhost:5000"],"$type":"KeyValuePair`2"},{"Key":"User-Agent","Value":["Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"],"$type":"KeyValuePair`2"},{"Key":"Accept-Encoding","Value":["gzip, deflate, br, zstd"],"$type":"KeyValuePair`2"},{"Key":"Accept-Language","Value":["en-US,en;q=0.9,bn;q=0.8,hi;q=0.7"],"$type":"KeyValuePair`2"},{"Key":"Referer","Value":["http://localhost:5000/"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-platform","Value":["\"Windows\""],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua","Value":["\"Chromium\";v=\"140\", \"Not=A?Brand\";v=\"24\", \"Google Chrome\";v=\"140\""],"$type":"KeyValuePair`2"},{"Key":"DNT","Value":["1"],"$type":"KeyValuePair`2"},{"Key":"sec-ch-ua-mobile","Value":["?0"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Site","Value":["same-origin"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Mode","Value":["no-cors"],"$type":"KeyValuePair`2"},{"Key":"Sec-Fetch-Dest","Value":["image"],"$type":"KeyValuePair`2"},{"Key":"X-Correlation-Id","Value":["00-0194a9f094e73b1fe5ee18ab628612f8-80890d74f02bba6f-00"],"$type":"KeyValuePair`2"}] | Body:  {"RequestId":"0HNFTR0CQ2D9A:00000002","RequestPath":"/favicon.ico","ConnectionId":"0HNFTR0CQ2D9A"}
+2025-09-27 21:11:16.215 +06:00 [INF] () PID:7116 ⬅️ Response 400 | Body: {"error":"Missing X-Mock-Scenario header"} {"RequestId":"0HNFTR0CQ2D9A:00000002","RequestPath":"/favicon.ico","ConnectionId":"0HNFTR0CQ2D9A"}
+2025-09-27 21:15:59.882 +06:00 [INF] () PID:7116 [0HNFTR0CQ2D9A:00000003] ➡️ Request GET / | Body:  {"RequestPath":"/","ConnectionId":"0HNFTR0CQ2D9A"}
+2025-09-27 21:15:59.961 +06:00 [INF] () PID:7116 [0HNFTR0CQ2D9A:00000003] ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+ {"RequestPath":"/","ConnectionId":"0HNFTR0CQ2D9A"}
+[2025-09-27 21:18:55.001 +06:00] [WRN] The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable.
+[2025-09-27 21:18:55.082 +06:00] [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2025-09-27 21:18:56.010 +06:00] [INF] [0HNFTR4M7VVCD:00000001] ➡️ Request GET / | Body: 
+[2025-09-27 21:18:56.073 +06:00] [INF] [0HNFTR4M7VVCD:00000001] ⬅️ Response 200 | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+
+[2025-09-27 21:19:26.746 +06:00] [INF] [0HNFTR4M7VVCG:00000001] ➡️ Request POST /billpayment/global/auth/signin | Body: {"username":"test"}
+[2025-09-27 21:19:27.357 +06:00] [INF] Responding 200 | Body: {"username":"username","status":"ok","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA","tokenType":"Bearer"}
+[2025-09-27 21:19:27.361 +06:00] [INF] [0HNFTR4M7VVCG:00000001] ⬅️ Response 200 | Body: {"username":"username","status":"ok","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA","tokenType":"Bearer"}
+[2025-09-27 21:23:15.710 +06:00] [INF] [0HNFTR4M7VVCH:00000001] ==> [Request : GET ==> /] | Body: 
+[2025-09-27 21:23:15.737 +06:00] [INF] [0HNFTR4M7VVCH:00000001] <== [Response : 200] | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+
+[2025-09-27 21:23:19.711 +06:00] [WRN] The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable.
+[2025-09-27 21:23:19.764 +06:00] [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2025-09-27 21:23:20.490 +06:00] [INF] [0HNFTR7545JDN:00000001] ==> [Request : GET ==> /] | Body: 
+[2025-09-27 21:23:20.554 +06:00] [INF] [0HNFTR7545JDN:00000001] <== [Response : 200] | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+
+[2025-09-27 21:23:24.506 +06:00] [INF] [0HNFTR7545JDQ:00000001] ==> [Request : POST ==> /billpayment/global/auth/signin] | Body: {"username":"test"}
+[2025-09-27 21:23:25.150 +06:00] [INF] Responding 200 | Body: {"username":"username","status":"ok","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA","tokenType":"Bearer"}
+[2025-09-27 21:23:25.154 +06:00] [INF] [0HNFTR7545JDQ:00000001] <== [Response : 200] | Body: {"username":"username","status":"ok","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA","tokenType":"Bearer"}
+[2025-09-27 21:25:04.904 +06:00] [INF] [0HNFTR7545JDN:00000004] ==> [Request : GET ==> /] | Body: 
+[2025-09-27 21:25:04.929 +06:00] [INF] [0HNFTR7545JDN:00000004] <== [Response : 200] | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+
+[2025-09-27 21:25:09.629 +06:00] [WRN] The WebRootPath was not found: F:\Projects\Demo\MockApiServer\MockApiServer\wwwroot. Static files may be unavailable.
+[2025-09-27 21:25:09.701 +06:00] [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2025-09-27 21:25:10.603 +06:00] [INF] [0HNFTR85TT50S:00000001] ==> [Request : GET ==> /] | Body: 
+[2025-09-27 21:25:10.664 +06:00] [INF] [0HNFTR85TT50S:00000001] <== [Response : 200] | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+
+[2025-09-27 21:25:30.930 +06:00] [INF] [0HNFTR85TT50V:00000001] ==> [Request : POST ==> /billpayment/global/auth/signin] | Body: {"username":"test"}
+[2025-09-27 21:25:31.578 +06:00] [INF] [Final Response : 200 | Body: {"username":"username","status":"ok","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA","tokenType":"Bearer"}
+[2025-09-27 21:25:31.580 +06:00] [INF] [0HNFTR85TT50V:00000001] <== [Response : 200] | Body: {"username":"username","status":"ok","accessToken":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJia2FzaCIsImlhdCI6MTYyNDg1NjI1MSwiZXhwIjoxNjI0ODU5ODUxfQ.Jor9nIFrtXx9dErVc10dg_lY1qGmtCumuNxRIpwnkzVR3wNGtqs0astHACe3AUR_hDyZm8AFZsceHcuS5ehqA","tokenType":"Bearer"}
+[2025-09-27 23:06:46.329 +06:00] [WRN] Overriding address(es) 'http://0.0.0.0:5000'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+[2025-09-27 23:06:47.412 +06:00] [INF] [0HNFTT0UT5641:00000001] ==> [Request : GET ==> /] | Body: 
+[2025-09-27 23:06:47.492 +06:00] [INF] [0HNFTT0UT5641:00000001] <== [Response : 200] | Body: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Mock API Server</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: #f1faee;
+        }
+
+        .card {
+            background: #fff;
+            color: #2c3e50;
+            padding: 3rem 4rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d3557;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.7rem 1.2rem;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            a.primary {
+                background: #457b9d;
+                color: #fff;
+            }
+
+                a.primary:hover {
+                    background: #1d3557;
+                }
+
+            a.secondary {
+                background: #f1faee;
+                color: #457b9d;
+                border: 1px solid #457b9d;
+            }
+
+                a.secondary:hover {
+                    background: #e5e5e5;
+                }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        @keyframes fadeIn {
+            from
+
+        {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>&#x26A1; Mock API Server</h1>
+        <p>The server is running and ready to serve mock APIs.</p>
+        <div>
+            <a href="/swagger" class="primary">Swagger UI</a>
+            <a href="/health" class="secondary">Health Check</a>
+        </div>
+        <div class="footer">© 2025 Mock API Server</div>
+    </div>
+</body>
+</html>
+

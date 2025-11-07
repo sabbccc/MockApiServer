@@ -1,0 +1,141 @@
+﻿@using MockApiServer.Models.ViewModels
+@model List<MockViewModel>
+@{
+    ViewData["Title"] = "Mocks";
+    Layout = "_Layout";
+}
+
+<div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <!-- Modal trigger -->
+        <button id="btnCreateMock"
+                type="button"
+                class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Add Mock
+        </button>
+    </div>
+
+    @await Html.PartialAsync("_ViewAll")
+</div>
+
+@section Modals
+{
+    <!-- Modal -->
+    <div class="modal fade" id="createOrEditMockModal"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-1"
+         aria-labelledby="createOrEditMockLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="createOrEditMockLabel">Add/Update Mock</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="mockModalBody">
+                    <!-- AJAX content will load here -->
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+            // Initialize DataTable
+            $('#mocksTable').DataTable({
+                pageLength: 10,
+                pagingType: 'numbers',
+                lengthChange: true,
+                ordering: true,
+                responsive: true,
+                destroy: true,
+                dom:'<"row mb-2"' +
+                    '<"col-12 col-md-6 d-flex align-items-center"B>' +
+                    '<"col-12 col-md-6 d-flex align-items-center justify-content-end"f>' +
+                    '>rtip',
+                buttons: [
+                    { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                ]
+            });
+
+            // Create button handler
+            $('#btnCreateMock').on('click', function () {
+                $('#createOrEditMockLabel').text('Add Mock');
+                $.get('/Mocks/Create', function (html) {
+                    $('#mockModalBody').html(html);
+                    $('#createOrEditMockModal').modal('show');
+                });
+            });
+
+            // Edit button handler
+            $(document).on('click', '.btn-edit-mock', function () {
+                const id = $(this).data('id');
+                $('#createOrEditMockLabel').text('Edit Mock');
+                $.get('/Mocks/Edit/' + id, function (html) {
+                    $('#mockModalBody').html(html);
+                    $('#createOrEditMockModal').modal('show');
+                });
+            });
+
+            // Reset modal on close
+            $('#createOrEditMockModal').on('hidden.bs.modal', function () {
+                $('#mockModalBody').empty();
+            });
+
+            // AJAX form submission for create/edit
+            $(document).on('submit', 'form#createMockForm, form#editMockForm', function (e) {
+                e.preventDefault();
+                const form = $(this);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    data: form.serialize(),
+                    success: function (res) {
+                        $('#createOrEditMockModal').modal('hide');
+                        if (res.success) {
+                            showToast('toast-success', res.message);
+
+                            const tableContainer = $('.table-responsive').parent();
+                            tableContainer.html(res.html);
+
+                            // Reinitialize DataTable after replacing HTML
+                            $('#mocksTable').DataTable({
+                                pageLength: 10,
+                                pagingType: 'numbers',
+                                lengthChange: true,
+                                ordering: true,
+                                responsive: true,
+                                destroy: true,
+                                dom:'<"row mb-2"' +
+                                    '<"col-12 col-md-6 d-flex align-items-center"B>' +
+                                    '<"col-12 col-md-6 d-flex align-items-center justify-content-end"f>' +
+                                    '>rtip',
+                                buttons: [
+                                    { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                                ]
+                            });
+                        } else {
+                            showToast('toast-failed', res.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        $('#mockModalBody').html(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

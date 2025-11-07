@@ -1,0 +1,141 @@
+﻿@using MockApiServer.Models.ViewModels
+@model List<MockScenarioViewModel>
+@{
+    ViewData["Title"] = "Mock Scenarios";
+    Layout = "_Layout";
+}
+
+<div class="card-body">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <!-- Modal trigger -->
+        <button id="btnCreateScenario"
+                type="button"
+                class="btn btn-success mb-3">
+            <i class="bi bi-plus-circle"></i> Add Scenario
+        </button>
+    </div>
+
+    @await Html.PartialAsync("_ViewAll")
+</div>
+
+@section Modals
+{
+    <!-- Create/Edit Modal -->
+    <div class="modal fade" id="createOrEditScenarioModal"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-1"
+         aria-labelledby="createOrEditScenarioLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="createOrEditScenarioLabel">Add/Update Scenario</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="scenarioModalBody">
+                    <!-- AJAX content will load here -->
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        $(document).ready(function () {
+            // DataTable init
+            $('#mockScenariosTable').DataTable({
+                pageLength: 10,
+                pagingType: 'numbers',
+                lengthChange: true,
+                ordering: true,
+                responsive: true,
+                destroy: true,
+                dom:'<"row mb-2"' +
+                    '<"col-12 col-md-6 d-flex align-items-center"B>' +
+                    '<"col-12 col-md-6 d-flex align-items-center justify-content-end"f>' +
+                    '>rtip',
+                buttons: [
+                    { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
+                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                ]
+            });
+
+            // Create
+            $('#btnCreateScenario').on('click', function () {
+                $('#createOrEditScenarioLabel').text('Add Scenario');
+                $.get('/MockScenarios/Create', function (html) {
+                    $('#scenarioModalBody').html(html);
+                    $('#createOrEditScenarioModal').modal('show');
+                });
+            });
+
+            // Edit
+            $(document).on('click', '.btn-edit-scenario', function () {
+                const id = $(this).data('id');
+                $('#createOrEditScenarioLabel').text('Edit Scenario');
+                $.get('/MockScenarios/Edit/' + id, function (html) {
+                    $('#scenarioModalBody').html(html);
+                    $('#createOrEditScenarioModal').modal('show');
+                });
+            });
+
+            // Reset modal content
+            $('#createOrEditScenarioModal').on('hidden.bs.modal', function () {
+                $('#scenarioModalBody').empty();
+            });
+
+            // AJAX form submission for create/edit
+            $(document).on('submit', 'form#createScenarioForm, form#editScenarioForm', function (e) {
+                e.preventDefault();
+                const form = $(this);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: form.attr('method'),
+                    data: form.serialize(),
+                    success: function (res) {
+                        $('#createOrEditScenarioModal').modal('hide');
+                        if (res.success) {
+                            showToast('toast-success', res.message);
+
+                            const tableContainer = $('.table-responsive').parent();
+                            tableContainer.html(res.html);
+
+                            // Reinitialize DataTable after replacing HTML
+                            $('#mockScenariosTable').DataTable({
+                                pageLength: 10,
+                                pagingType: 'numbers',
+                                lengthChange: true,
+                                ordering: true,
+                                responsive: true,
+                                destroy: true,
+                                dom:'<"row mb-2"' +
+                                    '<"col-12 col-md-6 d-flex align-items-center"B>' +
+                                    '<"col-12 col-md-6 d-flex align-items-center justify-content-end"f>' +
+                                    '>rtip',
+                                buttons: [
+                                    { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
+                                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                                ]
+                              });
+                         } else {
+                             showToast('toast-failed', res.message);
+                         }
+                    },
+                    error: function (xhr) {
+                        $('#scenarioModalBody').html(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

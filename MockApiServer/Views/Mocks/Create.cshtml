@@ -1,0 +1,55 @@
+﻿@model MockApiServer.Models.ViewModels.MockViewModel
+
+<form asp-action="Create" method="post" id="createMockForm">
+    <div class="row">
+        <!-- Row 1: Application Selection -->
+        <div class="col-12 col-md-4">
+            <label class="form-label">Application Name</label>
+            <select asp-for="ApplicationId" class="form-select" asp-items="Model.ApplicationList">
+                <option value="">-- Select Application --</option>
+            </select>
+            <span asp-validation-for="ApplicationName" class="text-danger small"></span>
+        </div>
+
+        <!-- Row 2: Remaining Inputs -->
+        <div class="col-12 col-md-4 mb-3">
+            <label class="form-label">Mock Name</label>
+            <input asp-for="Name" class="form-control" placeholder="e.g. DESCO - Sign In" />
+            <span asp-validation-for="Name" class="text-danger small"></span>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <label asp-for="Path" class="form-label"></label>
+            <input asp-for="Path" class="form-control" placeholder="/api/path" />
+            <span asp-validation-for="Path" class="text-danger small"></span>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <label asp-for="Method" class="form-label"></label>
+            <select asp-for="Method" class="form-select">
+                <option value="">-- Select Method --</option>
+                <option>GET</option>
+                <option>POST</option>
+                <option>PUT</option>
+                <option>DELETE</option>
+            </select>
+            <span asp-validation-for="Method" class="text-danger small"></span>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <label class="form-label">Status</label>
+            <select asp-for="IsActive" class="form-select">
+                <option value="">-- Select Status --</option>
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
+            </select>
+            <span asp-validation-for="IsActive" class="text-danger small"></span>
+        </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="d-flex justify-content-end gap-2 mt-3">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>

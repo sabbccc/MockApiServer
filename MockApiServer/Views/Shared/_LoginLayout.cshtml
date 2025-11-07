@@ -1,0 +1,224 @@
+﻿@{
+    var title = ViewData["Title"] ?? "Mock API Server";
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "Home";
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? "Index";
+}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Critical Dark Mode Script - Prevents Flash -->
+    <script>
+        // Immediately set dark mode before any rendering
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (!theme) {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>@title</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/assets/images/favicon.ico" />
+
+    <!-- Library / Plugin Css Build -->
+    <link rel="stylesheet" href="~/assets/css/core/libs.min.css" />
+    <!-- Aos Animation Css -->
+    <link rel="stylesheet" href="~/assets/vendor/aos/dist/aos.css" />
+
+    <!-- Hope Ui Design System Css -->
+    <link rel="stylesheet" href="~/assets/css/hope-ui.min.css?v=2.0.0" />
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="~/assets/css/custom.min.css?v=2.0.0" />
+
+    <!-- Dark Css -->
+    <link rel="stylesheet" href="~/assets/css/dark.min.css" />
+
+    <!-- Customizer Css -->
+    <link rel="stylesheet" href="~/assets/css/customizer.min.css" />
+
+    <!-- RTL Css -->
+    <link rel="stylesheet" href="~/assets/css/rtl.min.css" />
+
+    <!-- Bottstrap Icon Css -->
+    <link href="~/lib/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Fontawesome Icon Css -->
+    <link href="~/lib/fontawesome-icons/all.min.css" rel="stylesheet" />
+
+    <!-- DataTables Core -->
+    <link href="~/lib/data-tables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/data-tables/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+
+    <!-- Buttons Extension -->
+    <link href="~/lib/data-tables/css/buttons.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/data-tables/css/buttons.bootstrap5.min.css" rel="stylesheet" />
+
+    <link href="~/assets/css/custom.css" rel="stylesheet" />
+    <link href="~/assets/css/dark.css" rel="stylesheet" />
+</head>
+
+<body class=" " data-bs-spy="scroll" data-bs-target="#elements-section" data-bs-offset="0" tabindex="0">
+    <!-- Loader -->
+    @await Html.PartialAsync("_Loader")
+
+    <!-- Main Content -->
+    <main class="main-content">
+        @RenderBody()
+    </main>
+
+    <!-- SCRIPTS -->
+    <!-- jQuery first -->
+    <script src="~/lib/jquery/jquery-3.7.1.min.js"></script>
+
+    <!-- Theme Core Libraries -->
+    <script src="~/assets/js/core/libs.min.js"></script>
+    <script src="~/assets/js/core/external.min.js"></script>
+
+    <!-- DataTables -->
+    <script src="~/lib/data-tables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/data-tables/js/dataTables.bootstrap5.min.js"></script>
+
+    <!-- Buttons -->
+    <script src="~/lib/data-tables/js/dataTables.buttons.min.js"></script>
+    <script src="~/lib/data-tables/js/buttons.bootstrap5.min.js"></script>
+    <script src="~/lib/data-tables/js/buttons.html5.min.js"></script>
+    <script src="~/lib/data-tables/js/buttons.print.min.js"></script>
+
+    <!-- Export Dependencies -->
+    <script src="~/lib/file-gen/jszip.min.js"></script>
+    <script src="~/lib/file-gen/pdfmake.min.js"></script>
+    <script src="~/lib/file-gen/vfs_fonts.js"></script>
+
+    <!-- AOS Animation -->
+    <script src="~/assets/vendor/aos/dist/aos.js"></script>
+
+    <!-- Theme Scripts -->
+    <script src="~/assets/js/plugins/fslightbox.js"></script>
+    <script src="~/assets/js/plugins/setting.js"></script>
+    <script src="~/assets/js/plugins/slider-tabs.js"></script>
+    <script src="~/assets/js/plugins/form-wizard.js"></script>
+    <script src="~/assets/js/charts/chart.js"></script>
+    <script src="~/assets/js/charts/widgetcharts.js"></script>
+    <script src="~/assets/js/charts/vectore-chart.js"></script>
+    <script src="~/assets/js/charts/dashboard.js"></script>
+    <script src="~/assets/js/hope-ui.js" defer></script>
+
+    <!-- Loader Script -->
+    <script>
+        // Loader on full page load
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loading');
+            if (loader) {
+                setTimeout(() => loader.style.display = 'none', 300);
+            }
+        });
+
+        // Show loader on every AJAX start
+        $(document).ajaxStart(function () {
+            $('#loading').fadeIn(200);
+        });
+
+        // Hide loader on AJAX complete
+        $(document).ajaxStop(function () {
+            $('#loading').fadeOut(200);
+        });
+
+        // Optional: Hide loader on AJAX error too
+        $(document).ajaxError(function () {
+            $('#loading').fadeOut(200);
+        });
+
+        // Loader on normal page navigation
+        window.addEventListener('beforeunload', function () {
+            $('#loading').fadeIn(200);
+        });
+    </script>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        (function() {
+            // Initialize dark mode immediately to prevent flash
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            }
+        })();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            const darkModeText = document.getElementById('darkModeText');
+            const sidebarDarkModeIcon = document.getElementById('sidebarDarkModeIcon');
+
+            if (currentTheme === 'dark') {
+                // Set initial icons and text
+                if (darkModeIcon) {
+                    darkModeIcon.classList.remove('bi-moon-fill');
+                    darkModeIcon.classList.add('bi-sun-fill');
+                }
+                if (sidebarDarkModeIcon) {
+                    sidebarDarkModeIcon.classList.remove('bi-moon-fill');
+                    sidebarDarkModeIcon.classList.add('bi-sun-fill');
+                }
+                if (darkModeText) darkModeText.textContent = 'Light Mode';
+            } else {
+                if (darkModeText) darkModeText.textContent = 'Dark Mode';
+            }
+        });
+
+        function toggleDarkMode() {
+            const htmlElement = document.documentElement;
+            const bodyElement = document.body;
+            const darkModeIcon = document.getElementById('darkModeIcon');
+            const darkModeText = document.getElementById('darkModeText');
+            const sidebarDarkModeIcon = document.getElementById('sidebarDarkModeIcon');
+
+            const isDark = htmlElement.classList.toggle('dark');
+            bodyElement.classList.toggle('dark');
+
+            const icons = [darkModeIcon, sidebarDarkModeIcon].filter(icon => icon);
+
+            if (isDark) {
+                icons.forEach(icon => {
+                    icon.classList.remove('bi-moon-fill');
+                    icon.classList.add('bi-sun-fill');
+                });
+                if (darkModeText) darkModeText.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icons.forEach(icon => {
+                    icon.classList.remove('bi-sun-fill');
+                    icon.classList.add('bi-moon-fill');
+                });
+                if (darkModeText) darkModeText.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+
+            // Redraw DataTables (for proper color updates)
+            if ($.fn.DataTable) {
+                $('.dataTable').each(function () {
+                    if ($.fn.DataTable.isDataTable(this)) {
+                        $(this).DataTable().draw();
+                    }
+                });
+            }
+        }
+    </script>
+
+</body>
+
+<!-- Your page-specific scripts -->
+@RenderSection("Scripts", required: false)
+@RenderSection("Modals", required: false)
+
+</html>
