@@ -17,12 +17,12 @@ Whether your real backend is still under development or you just need predictabl
 ---
 
 ## Features  
-✅ Quick to set up and run — no database required  
-✅ Supports **GET**, **POST**, **PUT**, **DELETE**, and custom status codes  
-✅ Define responses dynamically via **JSON config** or **C# classes**  
-✅ Optionally simulate **delays**, **errors**, or **timeouts**  
-✅ CORS-enabled out of the box  
-✅ Ideal for frontend testing, demos, or CI/CD pipelines  
+- Quick to set up and run — no database required  
+- Supports **GET**, **POST**, **PUT**, **DELETE**, and custom status codes  
+- Define responses dynamically via **JSON config** or **C# classes**  
+- Optionally simulate **delays**, **errors**, or **timeouts**  
+- CORS-enabled out of the box  
+- Ideal for frontend testing, demos, or CI/CD pipelines  
 
 ---
 
