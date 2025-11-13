@@ -1,0 +1,4 @@
+/MockApiServer/bin
+/MockApiServer/obj
+/MockApiServer/Logs
+/MockApiServer/appsettings.json
