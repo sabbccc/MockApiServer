@@ -21,25 +21,25 @@
 
 @section Modals
 {
-<!-- Modal -->
-<div class="modal fade" id="createOrEditApplicationModal"
-     data-bs-backdrop="static"
-     data-bs-keyboard="false"
-     tabindex="-1"
-     aria-labelledby="createOrEditApplicationLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <h5 class="modal-title" id="createOrEditApplicationLabel">Add/Update Application</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="applicationModalBody">
-                <!-- AJAX content will load here -->
+    <!-- Modal -->
+    <div class="modal fade" id="createOrEditApplicationModal"
+         data-bs-backdrop="static"
+         data-bs-keyboard="false"
+         tabindex="-1"
+         aria-labelledby="createOrEditApplicationLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="createOrEditApplicationLabel">Add/Update Application</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="applicationModalBody">
+                    <!-- AJAX content will load here -->
+                </div>
             </div>
         </div>
     </div>
-</div>
 }
 
 @section Scripts {
@@ -49,11 +49,11 @@
         $(document).ready(function () {
             // Initialize DataTable
             $('#mockApplicationsTable').DataTable({
-                pageLength: 10,
-                pagingType: 'numbers',
-                lengthChange: true,
+                scrollX: true,
+                scrollY: '500px',
+                scrollCollapse: true,
+                paging: false,
                 ordering: true,
-                responsive: true,
                 destroy: true,
                 dom:'<"row mb-2"' +
                     '<"col-12 col-md-6 d-flex align-items-center"B>' +
@@ -61,10 +61,7 @@
                     '>rtip',
                 buttons: [
                     { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' }
                 ]
             });
 

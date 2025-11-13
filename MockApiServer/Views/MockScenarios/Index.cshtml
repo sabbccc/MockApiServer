@@ -48,11 +48,11 @@
         $(document).ready(function () {
             // DataTable init
             $('#mockScenariosTable').DataTable({
-                pageLength: 10,
-                pagingType: 'numbers',
-                lengthChange: true,
+                scrollX: true,
+                scrollY: '500px',
+                scrollCollapse: true,
+                paging: false,
                 ordering: true,
-                responsive: true,
                 destroy: true,
                 dom:'<"row mb-2"' +
                     '<"col-12 col-md-6 d-flex align-items-center"B>' +
@@ -60,10 +60,7 @@
                     '>rtip',
                 buttons: [
                     { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
-                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' }
                 ]
             });
 

@@ -2,3 +2,5 @@
 /MockApiServer/obj
 /MockApiServer/Logs
 /MockApiServer/appsettings.json
+/.vs
+/MockApiServer/appsettings.Development.json

@@ -170,9 +170,9 @@
                     sidebarDarkModeIcon.classList.remove('bi-moon-fill');
                     sidebarDarkModeIcon.classList.add('bi-sun-fill');
                 }
-                if (darkModeText) darkModeText.textContent = 'Light Mode';
+                if (darkModeText) darkModeText.textContent = 'Light';
             } else {
-                if (darkModeText) darkModeText.textContent = 'Dark Mode';
+                if (darkModeText) darkModeText.textContent = 'Dark';
             }
         });
 
@@ -193,14 +193,14 @@
                     icon.classList.remove('bi-moon-fill');
                     icon.classList.add('bi-sun-fill');
                 });
-                if (darkModeText) darkModeText.textContent = 'Light Mode';
+                if (darkModeText) darkModeText.textContent = 'Light';
                 localStorage.setItem('theme', 'dark');
             } else {
                 icons.forEach(icon => {
                     icon.classList.remove('bi-sun-fill');
                     icon.classList.add('bi-moon-fill');
                 });
-                if (darkModeText) darkModeText.textContent = 'Dark Mode';
+                if (darkModeText) darkModeText.textContent = 'Dark';
                 localStorage.setItem('theme', 'light');
             }
 
