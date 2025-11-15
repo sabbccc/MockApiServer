@@ -2,9 +2,9 @@
 @model List<ApplicationViewModel>
 
 <div class="table-responsive">
-    <table id="mockApplicationsTable" 
-        class="table table-striped align-middle text-start w-100" 
-        role="grid">
+    <table id="mockApplicationsTable"
+           class="table table-striped align-middle text-start w-100"
+           role="grid">
         <thead>
             <tr>
                 <th>ID</th>
@@ -16,43 +16,43 @@
         <tbody>
             @foreach (var app in Model)
             {
-            <tr>
-                <td>@app.Id</td>
-                <td>@app.Name</td>
-                <td>
-                    @if ((bool)app.IsActive)
-                    {
-                        <span class="badge bg-success">Active</span>
-                    }
-                    else
-                    {
-                        <span class="badge bg-danger">Inactive</span>
-                    }
-                </td>
-                <td>
-                    <a asp-controller="Mocks"
-                       asp-action="Index"
-                       asp-route-appId="@app.Id"
-                       class="btn btn-sm btn-icon btn-soft-success me-1"
-                       title="Mocks">
-                        <i class="bi bi-diagram-3 me-1"></i> Mocks
-                    </a>
+                <tr>
+                    <td>@app.Id</td>
+                    <td>@app.Name</td>
+                    <td>
+                        @if (app.IsActive != null && (bool)app.IsActive)
+                        {
+                            <span class="badge bg-success">Active</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-danger">Inactive</span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-controller="Mocks"
+                           asp-action="Index"
+                           asp-route-appId="@app.Id"
+                           class="btn btn-sm btn-icon btn-soft-success me-1"
+                           title="Mocks">
+                            <i class="bi bi-diagram-3 me-1"></i> Mocks
+                        </a>
 
-                    <button type="button"
-                            class="btn btn-sm btn-icon btn-soft-gray me-1 btn-edit-app"
-                            data-id="@app.Id"
-                            title="Edit">
-                        <i class="bi bi-pencil me-1"></i>
-                    </button>
+                        <button type="button"
+                                class="btn btn-sm btn-icon btn-soft-gray me-1 btn-edit-app"
+                                data-id="@app.Id"
+                                title="Edit">
+                            <i class="bi bi-pencil me-1"></i>
+                        </button>
 
-                    <a asp-action="Delete"
-                       asp-route-id="@app.Id"
-                       class="btn btn-sm btn-icon btn-soft-danger"
-                       title="Delete">
-                        <i class="bi bi-trash me-1"></i>
-                    </a>
-                </td>
-            </tr>
+                        <a asp-action="Delete"
+                           asp-route-id="@app.Id"
+                           class="btn btn-sm btn-icon btn-soft-danger"
+                           title="Delete">
+                            <i class="bi bi-trash me-1"></i>
+                        </a>
+                    </td>
+                </tr>
             }
         </tbody>
     </table>
