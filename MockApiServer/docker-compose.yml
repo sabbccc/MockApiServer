@@ -1,14 +1,13 @@
 ﻿services:
   api:
+    container_name: mockapi-server
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: mockapi-server
-    environment:
-      ASPNETCORE_ENVIRONMENT: Docker
-      ConnectionStrings__Default: "Server=host.docker.internal;Port=3306;Database=mock_api_server_db;User=mock_api_user;Password=!Password123;"
     ports:
       - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
     volumes:
-      - ./logs:/app/logs
+      - ./logs/mock-api:/app/logs
     restart: always
