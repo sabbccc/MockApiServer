@@ -104,16 +104,6 @@ CREATE TABLE `mocks` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `mocks`
---
-
-LOCK TABLES `mocks` WRITE;
-/*!40000 ALTER TABLE `mocks` DISABLE KEYS */;
-INSERT INTO `mocks` VALUES (1,1,'DESCO - Sign In','/billpayment/global/auth/signin','POST','2025-09-27 20:06:34','system',NULL,NULL,1),(2,1,'DESCO - Bill Info','/billpayment/global/billvendor/billInfo','POST','2025-09-27 20:06:34','system',NULL,NULL,1),(3,1,'DESCO - Payment Info','/billpayment/global/billvendor/paymentInfo','POST','2025-09-27 20:06:34','system',NULL,NULL,1),(4,1,'DESCO - Payment Status','/billpayment/global/billvendor/paymentStatus','POST','2025-09-27 20:06:34','system',NULL,NULL,1);
-/*!40000 ALTER TABLE `mocks` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `users`
 --
 
@@ -136,16 +126,6 @@ CREATE TABLE `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'sabbccc','aLek9gZMVKHL+8WhhyUA3OMhYki3NlrCFjpN0M2ybaE=','Sabbir Hossain','01770000000',NULL,'2025-10-21 23:43:16',NULL,'2025-10-21 23:46:40',NULL,1,NULL);
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Dumping routines for database 'mock_api_server_db'
