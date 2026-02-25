@@ -98,7 +98,7 @@ Host: localhost:5283
 - `MockApiServer/Controllers`: Contains both the Dashboard (MVC) and the `MockRequestsController` (the engine).
 - `MockApiServer/Services`: Business logic for scenario matching and response building.
 - `MockApiServer/Repositories`: Data access layer using EF Core.
-- `Files/`: Database scripts and Postman exports.
+- `Files/`: Database scripts.
 
 ---
 
