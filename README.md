@@ -92,21 +92,13 @@ GET /api/v1/profile
 X-Mock-Scenario: unauthorized
 Host: localhost:5283
 ```
-
----
-
-## 🧪 Testing with Postman  
-We have included a pre-configured Postman collection and environment to get you started quickly.
-- **Collection:** `Files/DESCO_MockApi.postman_collection.json`
-- **Environment:** `Files/DESCO_MockApi_Environment.postman_environment.json`
-
 ---
 
 ## 📂 Project Structure  
 - `MockApiServer/Controllers`: Contains both the Dashboard (MVC) and the `MockRequestsController` (the engine).
 - `MockApiServer/Services`: Business logic for scenario matching and response building.
 - `MockApiServer/Repositories`: Data access layer using EF Core.
-- `Files/`: Database scripts and Postman exports.
+- `Files/`: Database scripts.
 
 ---
 
