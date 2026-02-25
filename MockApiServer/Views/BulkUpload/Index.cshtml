@@ -1,0 +1,87 @@
+@{
+    ViewData["Title"] = "Bulk Upload";
+    Layout = "_Layout";
+}
+
+<div class="card-body">
+    <div class="row g-4">
+        <div class="col-12 col-lg-5">
+            <div class="border rounded p-4 bg-white shadow-sm">
+                <h5 class="mb-3">1. Download Sample Excel</h5>
+                <p class="text-muted mb-3">
+                    Download the sample workbook, fill in your Applications, Mocks, and MockScenarios,
+                    then upload the same file.
+                </p>
+                <a class="btn btn-primary" asp-action="Sample" data-skip-loader="true">
+                    <i class="bi bi-file-earmark-excel me-1"></i> Download Sample
+                </a>
+                <div class="mt-3 small text-muted">
+                    Keep the sheet names and headers unchanged.
+                </div>
+            </div>
+
+            <div class="border rounded p-4 bg-white shadow-sm mt-4">
+                <h5 class="mb-3">2. Upload Filled Workbook</h5>
+                <form asp-action="Upload" method="post" enctype="multipart/form-data">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label class="form-label">Excel file (.xlsx)</label>
+                        <input type="file" name="excelFile" class="form-control" accept=".xlsx" required />
+                    </div>
+                    <button type="submit" class="btn btn-success">
+                        <i class="bi bi-upload me-1"></i> Upload
+                    </button>
+                </form>
+                <div class="mt-3 small text-muted">
+                    The upload will create missing Applications, then Mocks, then MockScenarios.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-7">
+            <div class="border rounded p-4 bg-white shadow-sm">
+                <h5 class="mb-3">Column Guide</h5>
+
+                <div class="mb-3">
+                    <h6 class="mb-2">Applications</h6>
+                    <ul class="mb-0">
+                        <li><strong>Name</strong> (required)</li>
+                        <li><strong>IsActive</strong> (optional: TRUE/FALSE)</li>
+                    </ul>
+                </div>
+
+                <div class="mb-3">
+                    <h6 class="mb-2">Mocks</h6>
+                    <ul class="mb-0">
+                        <li><strong>ApplicationName</strong> (required)</li>
+                        <li><strong>Name</strong> (required, unique per Application)</li>
+                        <li><strong>Path</strong> (required)</li>
+                        <li><strong>Method</strong> (required, e.g., GET, POST)</li>
+                        <li><strong>IsActive</strong> (optional: TRUE/FALSE)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h6 class="mb-2">MockScenarios</h6>
+                    <ul class="mb-0">
+                        <li><strong>ApplicationName</strong> (required)</li>
+                        <li><strong>MockName</strong> (required, must match Mocks sheet)</li>
+                        <li><strong>ScenarioKey</strong> (required, unique per Mock)</li>
+                        <li><strong>StatusCode</strong> (required)</li>
+                        <li><strong>ResponseJson</strong> (required, valid JSON string)</li>
+                        <li><strong>HeadersJson</strong> (optional, valid JSON string)</li>
+                        <li><strong>IsActive</strong> (optional: TRUE/FALSE)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border rounded p-4 bg-white shadow-sm mt-4">
+                <h6 class="mb-2">Tips</h6>
+                <div class="text-muted">
+                    Use consistent Application and Mock names across sheets. If a name already exists, the uploader
+                    will skip duplicates and only add missing rows.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

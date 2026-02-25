@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MockApiServer.Services;
 
 [ApiController]
-[Route("{*path:regex(^(?!swagger|health|home|applications|mocks|mockscenarios|user).*$)}")]
+[Route("{*path:regex(^(?!swagger|health|home|applications|mocks|mockscenarios|bulkupload|user).*$)}")]
 [AllowAnonymous]
 public class MockRequestsController : ControllerBase
 {

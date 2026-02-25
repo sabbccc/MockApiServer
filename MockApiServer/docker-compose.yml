@@ -1,0 +1,13 @@
+﻿services:
+  api:
+    container_name: mockapi-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+    volumes:
+      - ./logs/mock-api:/app/logs
+    restart: always

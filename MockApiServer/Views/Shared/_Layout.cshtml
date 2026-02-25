@@ -177,8 +177,16 @@
             $('#loading').fadeOut(200);
         });
 
+        // Skip loader for specific actions (like file downloads)
+        let skipLoaderOnce = false;
+        $(document).on('click', '[data-skip-loader="true"]', function () {
+            skipLoaderOnce = true;
+            setTimeout(() => { skipLoaderOnce = false; }, 1000);
+        });
+
         // Loader on normal page navigation
         window.addEventListener('beforeunload', function () {
+            if (skipLoaderOnce) return;
             $('#loading').fadeIn(200);
         });
     </script>
