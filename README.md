@@ -2,7 +2,7 @@
 *A lightweight .NET-based API mock server for developers and testers.*
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-blueviolet?style=flat-square&logo=dotnet)](https://dotnet.microsoft.com/)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)  
+# [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)  
 [![Build](https://img.shields.io/github/actions/workflow/status/sabbccc/MockApiServer/dotnet.yml?style=flat-square)](https://github.com/sabbccc/MockApiServer/actions)  
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](../../issues)
 
