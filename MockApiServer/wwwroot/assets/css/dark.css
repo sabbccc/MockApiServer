@@ -1185,3 +1185,32 @@ hr {
 .dark.boxed-fancy .boxed-inner {
   background: #151824;
 }
+
+/* Dashboard Cards - Dark Mode */
+.dark .bg-white {
+  background-color: #222738 !important;
+  color: #8A92A6 !important;
+}
+
+.dark .border {
+  border-color: #30384f !important;
+}
+
+.dark .shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Ensure text is visible in dark mode cards */
+.dark .bg-white .text-muted {
+  color: #6c757d !important;
+}
+
+.dark .bg-white h6,
+.dark .bg-white .fw-semibold,
+.dark .bg-white .fw-medium {
+  color: #adb3c1 !important;
+}
+
+.dark .bg-white .small {
+  color: #8A92A6 !important;
+}

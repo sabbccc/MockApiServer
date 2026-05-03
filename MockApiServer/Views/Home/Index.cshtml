@@ -4,63 +4,371 @@
 @{
     ViewData["Title"] = "Mock API Server";
     Layout = "_Layout";
+
+    // Calculate statistics
+    var totalApps = Model.ApplicationViewModels?.Count ?? 0;
+    var activeApps = Model.ApplicationViewModels?.Count(a => a.IsActive == true) ?? 0;
+    var inactiveApps = totalApps - activeApps;
+
+    var totalMocks = Model.MockViewModels?.Count ?? 0;
+    var activeMocks = Model.MockViewModels?.Count(m => m.IsActive == true) ?? 0;
+    var inactiveMocks = totalMocks - activeMocks;
+
+    var totalScenarios = Model.MockScenarioViewModels?.Count ?? 0;
+    var activeScenarios = Model.MockScenarioViewModels?.Count(s => s.IsActive == true) ?? 0;
+    var inactiveScenarios = totalScenarios - activeScenarios;
+
+    // HTTP Methods breakdown
+    var getMocks = Model.MockViewModels?.Count(m => m.Method == "GET") ?? 0;
+    var postMocks = Model.MockViewModels?.Count(m => m.Method == "POST") ?? 0;
+    var putMocks = Model.MockViewModels?.Count(m => m.Method == "PUT") ?? 0;
+    var deleteMocks = Model.MockViewModels?.Count(m => m.Method == "DELETE") ?? 0;
+    var otherMocks = totalMocks - (getMocks + postMocks + putMocks + deleteMocks);
+
+    // Status code breakdown
+    var successCodes = Model.MockScenarioViewModels?.Count(s => s.StatusCode >= 200 && s.StatusCode < 300) ?? 0;
+    var clientErrors = Model.MockScenarioViewModels?.Count(s => s.StatusCode >= 400 && s.StatusCode < 500) ?? 0;
+    var serverErrors = Model.MockScenarioViewModels?.Count(s => s.StatusCode >= 500) ?? 0;
+    var otherCodes = totalScenarios - (successCodes + clientErrors + serverErrors);
+
+    // Recent scenarios (last 5)
+    var recentScenarios = Model.MockScenarioViewModels?
+        .Where(s => s.CreatedAt != null)
+        .OrderByDescending(s => s.CreatedAt)
+        .Take(5)
+        .ToList() ?? new List<MockScenarioViewModel>();
+
+    // Most used applications (by mock count)
+    var appUsage = Model.MockViewModels?
+        .GroupBy(m => m.ApplicationName)
+        .Select(g => new { AppName = g.Key, Count = g.Count() })
+        .OrderByDescending(x => x.Count)
+        .Take(5)
+        .ToList();
+
+    var hasAppUsage = appUsage != null && appUsage.Any();
 }
 
-<div class="card-body">
-    <div class="row g-3">
-
+<div class="card-body p-3">
+    <!-- Statistics Cards Row -->
+    <div class="row g-2 mb-3">
         <!-- Applications Card -->
         <div class="col-12 col-md-4">
-            <div class="stat-card card-bg-primary shadow-sm p-4 rounded-3 d-flex justify-content-between align-items-center border-0"
-                 data-aos="fade-down" data-aos-delay="600">
-                <div class="d-flex align-items-center gap-3">
-                    <i class="bi bi-app-indicator fs-2 text-primary"></i>
-                    <h6 class="fw-semibold text-primary mb-0">Applications</h6>
+            <div class="stat-card card-bg-primary shadow-sm p-3 rounded-3 border-0"
+                 data-aos="fade-up" data-aos-delay="100">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                        <h6 class="fw-semibold text-primary mb-1 small">Applications</h6>
+                        <h3 class="fw-bold text-primary mb-0 counter">@totalApps</h3>
+                    </div>
+                    <i class="bi bi-app-indicator fs-4 text-primary"></i>
                 </div>
-                <div class="text-end">
-                    <h2 class="fw-bold text-primary mb-1 counter">
-                        @((Model.ApplicationViewModels != null && Model.ApplicationViewModels.Count() != 0) ?
-                                                Model.ApplicationViewModels.Count().ToString() : "0")
-                    </h2>
-                    <small class="fw-medium text-primary text-opacity-75">Total Count</small>
+                <div class="d-flex justify-content-between text-primary text-opacity-75 small">
+                    <span><i class="bi bi-check-circle me-1"></i>@activeApps</span>
+                    <span><i class="bi bi-x-circle me-1"></i>@inactiveApps</span>
                 </div>
             </div>
         </div>
 
         <!-- Mocks Card -->
         <div class="col-12 col-md-4">
-            <div class="stat-card card-bg-info shadow-sm p-4 rounded-3 d-flex justify-content-between align-items-center border-0"
-                 data-aos="fade-down" data-aos-delay="600">
-                <div class="d-flex align-items-center gap-3">
-                    <i class="bi bi-braces fs-2 text-info"></i>
-                    <h6 class="fw-semibold text-info mb-0">Mocks</h6>
+            <div class="stat-card card-bg-info shadow-sm p-3 rounded-3 border-0"
+                 data-aos="fade-up" data-aos-delay="200">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                        <h6 class="fw-semibold text-info mb-1 small">Mocks</h6>
+                        <h3 class="fw-bold text-info mb-0 counter">@totalMocks</h3>
+                    </div>
+                    <i class="bi bi-braces fs-4 text-info"></i>
                 </div>
-                <div class="text-end">
-                    <h2 class="fw-bold text-info mb-1 counter">
-                        @((Model.MockViewModels != null && Model.MockViewModels.Count() != 0) ?
-                                                Model.MockViewModels.Count().ToString() : "0")
-                    </h2>
-                    <small class="fw-medium text-info text-opacity-75">Total Count</small>
+                <div class="d-flex justify-content-between text-info text-opacity-75 small">
+                    <span><i class="bi bi-check-circle me-1"></i>@activeMocks</span>
+                    <span><i class="bi bi-x-circle me-1"></i>@inactiveMocks</span>
                 </div>
             </div>
         </div>
 
         <!-- Scenarios Card -->
         <div class="col-12 col-md-4">
-            <div class="stat-card card-bg-success shadow-sm p-4 rounded-3 d-flex justify-content-between align-items-center border-0"
-                 data-aos="fade-down" data-aos-delay="600">
-                <div class="d-flex align-items-center gap-3">
-                    <i class="bi bi-diagram-3 fs-2 text-success"></i>
-                    <h6 class="fw-semibold text-success mb-0">Scenarios</h6>
+            <div class="stat-card card-bg-success shadow-sm p-3 rounded-3 border-0"
+                 data-aos="fade-up" data-aos-delay="300">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <div>
+                        <h6 class="fw-semibold text-success mb-1 small">Scenarios</h6>
+                        <h3 class="fw-bold text-success mb-0 counter">@totalScenarios</h3>
+                    </div>
+                    <i class="bi bi-diagram-3 fs-4 text-success"></i>
                 </div>
-                <div class="text-end">
-                    <h2 class="fw-bold text-success mb-1 counter">
-                        @((Model.MockScenarioViewModels != null && Model.MockScenarioViewModels.Count() != 0) ?
-                                                Model.MockScenarioViewModels.Count().ToString() : "0")
-                    </h2>
-                    <small class="fw-medium text-success text-opacity-75">Total Count</small>
+                <div class="d-flex justify-content-between text-success text-opacity-75 small">
+                    <span><i class="bi bi-check-circle me-1"></i>@activeScenarios</span>
+                    <span><i class="bi bi-x-circle me-1"></i>@inactiveScenarios</span>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Charts Row -->
+    <div class="row g-2 mb-3">
+        <!-- HTTP Methods Distribution -->
+        <div class="col-12 col-lg-4">
+            <div class="border rounded p-2 bg-white shadow-sm" data-aos="fade-right">
+                <h6 class="fw-semibold mb-2 small">
+                    <i class="bi bi-bar-chart me-1 text-primary"></i>HTTP Methods
+                </h6>
+                <div id="httpMethodsChart" style="height: 200px;"></div>
+            </div>
+        </div>
+
+        <!-- Status Codes Distribution -->
+        <div class="col-12 col-lg-4">
+            <div class="border rounded p-2 bg-white shadow-sm" data-aos="fade-left">
+                <h6 class="fw-semibold mb-2 small">
+                    <i class="bi bi-pie-chart me-1 text-success"></i>Status Codes
+                </h6>
+                <div id="statusCodesChart" style="height: 200px;"></div>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="col-12 col-lg-4">
+            <div class="border rounded p-2 bg-white shadow-sm" data-aos="fade-up">
+                <h6 class="fw-semibold mb-2 small">
+                    <i class="bi bi-lightning me-1 text-warning"></i>Endpoint Types
+                </h6>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <div class="text-center p-2 border rounded">
+                            <i class="bi bi-lightning-charge text-warning"></i>
+                            <div class="fw-bold">@getMocks</div>
+                            <div class="small text-muted">GET</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-2 border rounded">
+                            <i class="bi bi-upload text-success"></i>
+                            <div class="fw-bold">@postMocks</div>
+                            <div class="small text-muted">POST</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-2 border rounded">
+                            <i class="bi bi-arrow-repeat text-info"></i>
+                            <div class="fw-bold">@putMocks</div>
+                            <div class="small text-muted">PUT</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-center p-2 border rounded">
+                            <i class="bi bi-trash text-danger"></i>
+                            <div class="fw-bold">@deleteMocks</div>
+                            <div class="small text-muted">DELETE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Overview Row -->
+    <div class="row g-2">
+        <!-- Most Used Applications -->
+        <div class="col-12 col-lg-6">
+            <div class="border rounded p-2 bg-white shadow-sm" data-aos="fade-up" style="height: 250px; overflow-y: auto;">
+                <h6 class="fw-semibold mb-2 small">
+                    <i class="bi bi-trophy me-1 text-warning"></i>Top Applications
+                </h6>
+                @if (hasAppUsage)
+                {
+                    <div class="list-group list-group-flush">
+                        @foreach (var app in appUsage!.Take(3))
+                        {
+                            var percentage = totalMocks > 0 ? (app.Count * 100.0 / totalMocks) : 0;
+                            <div class="list-group-item border-0 px-0 py-2">
+                                <div class="d-flex justify-content-between align-items-center mb-1">
+                                    <span class="fw-medium small">@app.AppName</span>
+                                    <span class="badge bg-primary">@app.Count</span>
+                                </div>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-primary" role="progressbar"
+                                         style="width: @percentage.ToString("F1")%"
+                                         aria-valuenow="@percentage" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center text-muted py-4">
+                        <i class="bi bi-inbox fs-3 mb-1"></i>
+                        <p class="mb-0 small">No applications</p>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="col-12 col-lg-6">
+            <div class="border rounded p-2 bg-white shadow-sm" data-aos="fade-up" style="height: 250px; overflow-y: auto;">
+                <h6 class="fw-semibold mb-2 small">
+                    <i class="bi bi-clock-history me-1 text-info"></i>Recent Scenarios
+                </h6>
+                @if (recentScenarios.Any())
+                {
+                    <div class="timeline-container">
+                        @foreach (var scenario in recentScenarios.Take(3))
+                        {
+                            var statusBadgeClass = scenario.StatusCode >= 200 && scenario.StatusCode < 300 ? "bg-success" :
+                                                   scenario.StatusCode >= 400 && scenario.StatusCode < 500 ? "bg-warning" :
+                                                   scenario.StatusCode >= 500 ? "bg-danger" : "bg-secondary";
+                            <div class="d-flex gap-2 mb-2 pb-2 border-bottom">
+                                <div>
+                                    <span class="badge @statusBadgeClass">@scenario.StatusCode</span>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="fw-medium small text-truncate">@scenario.MockName</div>
+                                    <div class="small text-muted">@scenario.ScenarioKey</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="text-center text-muted py-4">
+                        <i class="bi bi-calendar-x fs-3 mb-1"></i>
+                        <p class="mb-0 small">No scenarios</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        // Detect current theme
+        const isDark = document.documentElement.classList.contains('dark');
+
+        // Theme-aware colors
+        const chartTheme = {
+            mode: isDark ? 'dark' : 'light',
+            foreColor: isDark ? '#8A92A6' : '#373d3f',
+            background: isDark ? '#222738' : '#ffffff'
+        };
+
+        // HTTP Methods Chart
+        var httpMethodsOptions = {
+            series: [@getMocks, @postMocks, @putMocks, @deleteMocks, @otherMocks],
+            chart: {
+                type: 'donut',
+                height: 200,
+                background: chartTheme.background,
+                foreColor: chartTheme.foreColor
+            },
+            labels: ['GET', 'POST', 'PUT', 'DELETE', 'Other'],
+            colors: ['#3a57e8', '#4bc7d2', '#00ca00', '#ee335e', '#6c757d'],
+            legend: {
+                position: 'bottom',
+                fontSize: '11px',
+                labels: {
+                    colors: chartTheme.foreColor
+                }
+            },
+            plotOptions: {
+                pie: {
+                    donut: {
+                        size: '60%',
+                        labels: {
+                            show: true,
+                            total: {
+                                show: true,
+                                label: 'Total',
+                                fontSize: '12px',
+                                color: chartTheme.foreColor,
+                                formatter: function (w) {
+                                    return @totalMocks
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            theme: {
+                mode: chartTheme.mode
+            }
+        };
+
+        // Status Codes Chart
+        var statusCodesOptions = {
+            series: [{
+                name: 'Scenarios',
+                data: [@successCodes, @clientErrors, @serverErrors, @otherCodes]
+            }],
+            chart: {
+                type: 'bar',
+                height: 200,
+                toolbar: {
+                    show: false
+                },
+                background: chartTheme.background,
+                foreColor: chartTheme.foreColor
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    columnWidth: '50%',
+                    distributed: true
+                }
+            },
+            colors: ['#00ca00', '#ffc107', '#ee335e', '#6c757d'],
+            dataLabels: {
+                enabled: false
+            },
+            legend: {
+                show: false
+            },
+            xaxis: {
+                categories: ['2xx', '4xx', '5xx', 'Other'],
+                labels: {
+                    style: {
+                        fontSize: '11px',
+                        colors: chartTheme.foreColor
+                    }
+                }
+            },
+            yaxis: {
+                labels: {
+                    style: {
+                        fontSize: '11px',
+                        colors: chartTheme.foreColor
+                    }
+                }
+            },
+            theme: {
+                mode: chartTheme.mode
+            },
+            grid: {
+                borderColor: isDark ? '#30384f' : '#e0e0e0'
+            }
+        };
+
+        // Render charts
+        if (typeof ApexCharts !== 'undefined') {
+            var httpMethodsChart = new ApexCharts(document.querySelector("#httpMethodsChart"), httpMethodsOptions);
+            httpMethodsChart.render();
+
+            var statusCodesChart = new ApexCharts(document.querySelector("#statusCodesChart"), statusCodesOptions);
+            statusCodesChart.render();
+
+            // Handle theme changes
+            document.addEventListener('ColorChange', (e) => {
+                // Reload page to update charts with new theme
+                location.reload();
+            });
+        }
+    </script>
+}

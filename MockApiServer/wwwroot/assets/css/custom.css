@@ -671,8 +671,8 @@ html, body {
 
 /* Prevent vertical scrollbar unless necessary */
 .content-wrapper {
-    padding-bottom: 50px; /* matches footer height */
-    overflow-y: auto;
+    padding-bottom: 20px;
+    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -796,7 +796,9 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 93vh;
+    min-height: 85vh;
+    max-height: 93vh;
+    overflow-y: auto;
     padding: 0;
 }
 
@@ -969,4 +971,45 @@ html, body {
 .dark-mode-toggle-container {
     z-index: 1050;
     transform: translate(-53%, 0)!important;
+}
+
+/* Responsive improvements */
+@media (max-width: 991.98px) {
+    .content-card {
+        min-height: auto;
+    }
+}
+
+/* Ensure tables don't cause horizontal scroll on small screens */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Add spacing for dashboard cards on mobile */
+@media (max-width: 767.98px) {
+    .card-body {
+        padding: 1rem;
+    }
+
+    .row.g-3 > * {
+        margin-bottom: 0.75rem;
+    }
+
+    .row.g-4 > * {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ensure Bootstrap Icons load correctly */
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+    font-family: "bootstrap-icons" !important;
+    font-style: normal;
+    font-weight: normal !important;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }

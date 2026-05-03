@@ -29,6 +29,7 @@ public class MockScenariosController : Controller
         scenarios = (scenarios.Count() > 0) ?
             scenarios : new List<MockScenarioViewModel>();
 
+        ViewBag.MockId = mockId;
         return View(scenarios);
     }
 
@@ -96,7 +97,11 @@ public class MockScenariosController : Controller
         }
 
         await _service.UpdateAsync(model);
-        var scenarios = await _service.GetAllAsync();
+
+        // Get filtered scenarios based on the mock context
+        var scenarios = model.MockId.HasValue && model.MockId.Value > 0
+            ? await _service.GetByMockIdAsync(model.MockId.Value)
+            : await _service.GetAllAsync();
         var html = await this.RenderViewAsync("_ViewAll", scenarios, true);
 
         return Json(new { success = true, message = "Mock Scenario updated successfully!", html });
@@ -113,9 +118,10 @@ public class MockScenariosController : Controller
             return RedirectToAction(nameof(Index));
         }
 
+        var mockId = scenario.MockId ?? 0;
         await _service.DeleteAsync(id);
         TempData["success"] = "Mock scenario deleted successfully.";
-        return RedirectToAction(nameof(Index));
+        return RedirectToAction(nameof(Index), new { mockId });
     }
 
 }

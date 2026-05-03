@@ -307,12 +307,14 @@ const resizePlugins = () => {
 -----------------------------------------------------------------------*/
 const loaderInit = () => {
   const loader = document.querySelector('.loader')
-  setTimeout(() => {
-    loader.classList.add('animate__animated', 'animate__fadeOut')
+  if (loader) {
     setTimeout(() => {
-      loader.classList.add('d-none')
+      loader.classList.add('animate__animated', 'animate__fadeOut')
+      setTimeout(() => {
+        loader.classList.add('d-none')
+      }, 500)
     }, 500)
-  }, 500)
+  }
 }
 /*---------------------------------------------------------------------
               Sidebar Toggle
@@ -320,10 +322,12 @@ const loaderInit = () => {
 const sidebarToggle = (elem) => {
   elem.addEventListener('click', (e) => {
     const sidebar = document.querySelector('.sidebar')
-    if (sidebar.classList.contains('sidebar-mini')) {
-      sidebar.classList.remove('sidebar-mini')
-    } else {
-      sidebar.classList.add('sidebar-mini')
+    if (sidebar) {
+      if (sidebar.classList.contains('sidebar-mini')) {
+        sidebar.classList.remove('sidebar-mini')
+      } else {
+        sidebar.classList.add('sidebar-mini')
+      }
     }
   })
 }

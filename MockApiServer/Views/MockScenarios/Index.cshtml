@@ -3,9 +3,10 @@
 @{
     ViewData["Title"] = "Mock Scenarios";
     Layout = "_Layout";
+    var mockId = ViewBag.MockId ?? 0;
 }
 
-<div class="card-body">
+<div class="card-body pb-5" data-mock-id="@mockId">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <!-- Modal trigger -->
         <button id="btnCreateScenario"
@@ -49,7 +50,7 @@
             // DataTable init
             $('#mockScenariosTable').DataTable({
                 scrollX: true,
-                scrollY: '500px',
+                scrollY: '400px',
                 scrollCollapse: true,
                 paging: false,
                 ordering: true,
@@ -69,6 +70,10 @@
                 $('#createOrEditScenarioLabel').text('Add Scenario');
                 $.get('/MockScenarios/Create', function (html) {
                     $('#scenarioModalBody').html(html);
+                    // Pre-select the mock if we're in a filtered view
+                    if (mockId > 0) {
+                        $('#scenarioModalBody').find('select[name="MockId"]').val(mockId);
+                    }
                     $('#createOrEditScenarioModal').modal('show');
                 });
             });
@@ -106,11 +111,11 @@
 
                             // Reinitialize DataTable after replacing HTML
                             $('#mockScenariosTable').DataTable({
-                                pageLength: 10,
-                                pagingType: 'numbers',
-                                lengthChange: true,
+                                scrollX: true,
+                                scrollY: '400px',
+                                scrollCollapse: true,
+                                paging: false,
                                 ordering: true,
-                                responsive: true,
                                 destroy: true,
                                 dom:'<"row mb-2"' +
                                     '<"col-12 col-md-6 d-flex align-items-center"B>' +
@@ -118,12 +123,9 @@
                                     '>rtip',
                                 buttons: [
                                     { extend: 'copy', text: '<i class="bi bi-clipboard"></i> Copy', className: 'btn btn-soft-info btn-sm' },
-                                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' },
-                                    { extend: 'csv', text: '<i class="bi bi-filetype-csv"></i> CSV', className: 'btn btn-soft-info btn-sm' },
-                                    { extend: 'pdf', text: '<i class="bi bi-file-earmark-pdf"></i> PDF', className: 'btn btn-soft-info btn-sm' },
-                                    { extend: 'print', text: '<i class="bi bi-printer"></i> Print', className: 'btn btn-soft-info btn-sm' }
+                                    { extend: 'excel', text: '<i class="bi bi-file-earmark-excel"></i> Excel', className: 'btn btn-soft-info btn-sm' }
                                 ]
-                              });
+                            });
                          } else {
                              showToast('toast-failed', res.message);
                          }

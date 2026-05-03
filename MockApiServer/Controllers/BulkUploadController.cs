@@ -26,28 +26,79 @@ public class BulkUploadController : Controller
     {
         using var workbook = new XLWorkbook();
 
+        // ========== APPLICATIONS SHEET ==========
         var appsSheet = workbook.Worksheets.Add("Applications");
         appsSheet.Cell(1, 1).Value = "Name";
         appsSheet.Cell(1, 2).Value = "IsActive";
+
+        // Sample data
         appsSheet.Cell(2, 1).Value = "Payments";
         appsSheet.Cell(2, 2).Value = "TRUE";
+
+        appsSheet.Cell(3, 1).Value = "User Management";
+        appsSheet.Cell(3, 2).Value = "TRUE";
+
+        appsSheet.Cell(4, 1).Value = "Notifications";
+        appsSheet.Cell(4, 2).Value = "TRUE";
+
+        // Styling
         appsSheet.Range(1, 1, 1, 2).Style.Font.Bold = true;
+        appsSheet.Range(1, 1, 1, 2).Style.Fill.BackgroundColor = XLColor.LightBlue;
         appsSheet.Columns().AdjustToContents();
 
+        // ========== MOCKS SHEET ==========
         var mocksSheet = workbook.Worksheets.Add("Mocks");
         mocksSheet.Cell(1, 1).Value = "ApplicationName";
         mocksSheet.Cell(1, 2).Value = "Name";
         mocksSheet.Cell(1, 3).Value = "Path";
         mocksSheet.Cell(1, 4).Value = "Method";
         mocksSheet.Cell(1, 5).Value = "IsActive";
+
+        // Payments mocks
         mocksSheet.Cell(2, 1).Value = "Payments";
         mocksSheet.Cell(2, 2).Value = "GetInvoice";
         mocksSheet.Cell(2, 3).Value = "/api/invoices/{id}";
         mocksSheet.Cell(2, 4).Value = "GET";
         mocksSheet.Cell(2, 5).Value = "TRUE";
+
+        mocksSheet.Cell(3, 1).Value = "Payments";
+        mocksSheet.Cell(3, 2).Value = "CreatePayment";
+        mocksSheet.Cell(3, 3).Value = "/api/payments";
+        mocksSheet.Cell(3, 4).Value = "POST";
+        mocksSheet.Cell(3, 5).Value = "TRUE";
+
+        mocksSheet.Cell(4, 1).Value = "Payments";
+        mocksSheet.Cell(4, 2).Value = "GetPaymentStatus";
+        mocksSheet.Cell(4, 3).Value = "/api/payments/{id}/status";
+        mocksSheet.Cell(4, 4).Value = "GET";
+        mocksSheet.Cell(4, 5).Value = "TRUE";
+
+        // User Management mocks
+        mocksSheet.Cell(5, 1).Value = "User Management";
+        mocksSheet.Cell(5, 2).Value = "Login";
+        mocksSheet.Cell(5, 3).Value = "/api/auth/login";
+        mocksSheet.Cell(5, 4).Value = "POST";
+        mocksSheet.Cell(5, 5).Value = "TRUE";
+
+        mocksSheet.Cell(6, 1).Value = "User Management";
+        mocksSheet.Cell(6, 2).Value = "GetUserProfile";
+        mocksSheet.Cell(6, 3).Value = "/api/users/{id}";
+        mocksSheet.Cell(6, 4).Value = "GET";
+        mocksSheet.Cell(6, 5).Value = "TRUE";
+
+        // Notifications mocks
+        mocksSheet.Cell(7, 1).Value = "Notifications";
+        mocksSheet.Cell(7, 2).Value = "SendEmail";
+        mocksSheet.Cell(7, 3).Value = "/api/notifications/email";
+        mocksSheet.Cell(7, 4).Value = "POST";
+        mocksSheet.Cell(7, 5).Value = "TRUE";
+
+        // Styling
         mocksSheet.Range(1, 1, 1, 5).Style.Font.Bold = true;
+        mocksSheet.Range(1, 1, 1, 5).Style.Fill.BackgroundColor = XLColor.LightGreen;
         mocksSheet.Columns().AdjustToContents();
 
+        // ========== MOCK SCENARIOS SHEET ==========
         var scenariosSheet = workbook.Worksheets.Add("MockScenarios");
         scenariosSheet.Cell(1, 1).Value = "ApplicationName";
         scenariosSheet.Cell(1, 2).Value = "MockName";
@@ -56,21 +107,105 @@ public class BulkUploadController : Controller
         scenariosSheet.Cell(1, 5).Value = "ResponseJson";
         scenariosSheet.Cell(1, 6).Value = "HeadersJson";
         scenariosSheet.Cell(1, 7).Value = "IsActive";
-        scenariosSheet.Cell(2, 1).Value = "Payments";
-        scenariosSheet.Cell(2, 2).Value = "GetInvoice";
-        scenariosSheet.Cell(2, 3).Value = "SUCCESS";
-        scenariosSheet.Cell(2, 4).Value = 200;
-        scenariosSheet.Cell(2, 5).Value = "{\"id\": \"123\", \"status\": \"PAID\"}";
-        scenariosSheet.Cell(2, 6).Value = "{\"x-trace-id\": \"abc-123\"}";
-        scenariosSheet.Cell(2, 7).Value = "TRUE";
+
+        var row = 2;
+
+        // GetInvoice scenarios
+        scenariosSheet.Cell(row, 1).Value = "Payments";
+        scenariosSheet.Cell(row, 2).Value = "GetInvoice";
+        scenariosSheet.Cell(row, 3).Value = "SUCCESS";
+        scenariosSheet.Cell(row, 4).Value = 200;
+        scenariosSheet.Cell(row, 5).Value = "{\"id\":\"INV-123\",\"amount\":1500.00,\"status\":\"PAID\",\"date\":\"2024-01-15\"}";
+        scenariosSheet.Cell(row, 6).Value = "{\"Content-Type\":\"application/json\"}";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        scenariosSheet.Cell(row, 1).Value = "Payments";
+        scenariosSheet.Cell(row, 2).Value = "GetInvoice";
+        scenariosSheet.Cell(row, 3).Value = "NOT_FOUND";
+        scenariosSheet.Cell(row, 4).Value = 404;
+        scenariosSheet.Cell(row, 5).Value = "{\"error\":\"Invoice not found\",\"code\":\"INV_404\"}";
+        scenariosSheet.Cell(row, 6).Value = "";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        // CreatePayment scenarios
+        scenariosSheet.Cell(row, 1).Value = "Payments";
+        scenariosSheet.Cell(row, 2).Value = "CreatePayment";
+        scenariosSheet.Cell(row, 3).Value = "SUCCESS";
+        scenariosSheet.Cell(row, 4).Value = 201;
+        scenariosSheet.Cell(row, 5).Value = "{\"id\":\"PAY-456\",\"status\":\"PENDING\",\"transactionId\":\"TXN-789\"}";
+        scenariosSheet.Cell(row, 6).Value = "{\"Location\":\"/api/payments/PAY-456\"}";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        scenariosSheet.Cell(row, 1).Value = "Payments";
+        scenariosSheet.Cell(row, 2).Value = "CreatePayment";
+        scenariosSheet.Cell(row, 3).Value = "INSUFFICIENT_FUNDS";
+        scenariosSheet.Cell(row, 4).Value = 400;
+        scenariosSheet.Cell(row, 5).Value = "{\"error\":\"Insufficient funds\",\"code\":\"PAY_400\",\"required\":500.00,\"available\":200.00}";
+        scenariosSheet.Cell(row, 6).Value = "";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        // GetPaymentStatus scenarios
+        scenariosSheet.Cell(row, 1).Value = "Payments";
+        scenariosSheet.Cell(row, 2).Value = "GetPaymentStatus";
+        scenariosSheet.Cell(row, 3).Value = "COMPLETED";
+        scenariosSheet.Cell(row, 4).Value = 200;
+        scenariosSheet.Cell(row, 5).Value = "{\"paymentId\":\"PAY-456\",\"status\":\"COMPLETED\",\"completedAt\":\"2024-01-15T10:30:00Z\"}";
+        scenariosSheet.Cell(row, 6).Value = "";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        // Login scenarios
+        scenariosSheet.Cell(row, 1).Value = "User Management";
+        scenariosSheet.Cell(row, 2).Value = "Login";
+        scenariosSheet.Cell(row, 3).Value = "SUCCESS";
+        scenariosSheet.Cell(row, 4).Value = 200;
+        scenariosSheet.Cell(row, 5).Value = "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\",\"userId\":\"U123\",\"expiresIn\":3600}";
+        scenariosSheet.Cell(row, 6).Value = "{\"Set-Cookie\":\"auth=token123; HttpOnly\"}";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        scenariosSheet.Cell(row, 1).Value = "User Management";
+        scenariosSheet.Cell(row, 2).Value = "Login";
+        scenariosSheet.Cell(row, 3).Value = "INVALID_CREDENTIALS";
+        scenariosSheet.Cell(row, 4).Value = 401;
+        scenariosSheet.Cell(row, 5).Value = "{\"error\":\"Invalid username or password\",\"code\":\"AUTH_401\"}";
+        scenariosSheet.Cell(row, 6).Value = "";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        // GetUserProfile scenarios
+        scenariosSheet.Cell(row, 1).Value = "User Management";
+        scenariosSheet.Cell(row, 2).Value = "GetUserProfile";
+        scenariosSheet.Cell(row, 3).Value = "SUCCESS";
+        scenariosSheet.Cell(row, 4).Value = 200;
+        scenariosSheet.Cell(row, 5).Value = "{\"id\":\"U123\",\"name\":\"John Doe\",\"email\":\"john@example.com\",\"role\":\"admin\"}";
+        scenariosSheet.Cell(row, 6).Value = "";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+        row++;
+
+        // SendEmail scenarios
+        scenariosSheet.Cell(row, 1).Value = "Notifications";
+        scenariosSheet.Cell(row, 2).Value = "SendEmail";
+        scenariosSheet.Cell(row, 3).Value = "SUCCESS";
+        scenariosSheet.Cell(row, 4).Value = 202;
+        scenariosSheet.Cell(row, 5).Value = "{\"messageId\":\"MSG-999\",\"status\":\"QUEUED\",\"estimatedDelivery\":\"2024-01-15T11:00:00Z\"}";
+        scenariosSheet.Cell(row, 6).Value = "";
+        scenariosSheet.Cell(row, 7).Value = "TRUE";
+
+        // Styling
         scenariosSheet.Range(1, 1, 1, 7).Style.Font.Bold = true;
+        scenariosSheet.Range(1, 1, 1, 7).Style.Fill.BackgroundColor = XLColor.LightYellow;
         scenariosSheet.Columns().AdjustToContents();
 
         using var stream = new MemoryStream();
         workbook.SaveAs(stream);
         stream.Position = 0;
 
-        var fileName = "mock-api-bulk-upload-sample.xlsx";
+        var fileName = $"MockAPI-Sample-{DateTime.Now:yyyyMMdd-HHmmss}.xlsx";
         return File(stream.ToArray(),
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             fileName);
@@ -305,12 +440,25 @@ public class BulkUploadController : Controller
             await _context.SaveChangesAsync();
         }
 
-        var summary = $"Upload complete. Added: Applications {appsAdded}, Mocks {mocksAdded}, MockScenarios {scenariosAdded}.";
-        TempData["success"] = summary;
+        var summary = $"✅ Upload successful! Added: {appsAdded} Applications, {mocksAdded} Mocks, {scenariosAdded} Scenarios.";
+
+        if (appsAdded == 0 && mocksAdded == 0 && scenariosAdded == 0)
+        {
+            TempData["warning"] = "No new data was added. All entries already exist in the database.";
+        }
+        else
+        {
+            TempData["success"] = summary;
+        }
 
         if (errors.Count > 0)
         {
-            TempData["warning"] = $"Completed with {errors.Count} warning(s). First: {errors[0]}";
+            var errorSummary = string.Join("<br/>", errors.Take(5));
+            if (errors.Count > 5)
+            {
+                errorSummary += $"<br/>... and {errors.Count - 5} more error(s).";
+            }
+            TempData["warning"] = $"Completed with {errors.Count} warning(s):<br/>{errorSummary}";
         }
 
         return RedirectToAction(nameof(Index));

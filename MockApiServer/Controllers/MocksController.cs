@@ -31,6 +31,7 @@ public class MocksController : Controller
         mocks = (mocks.Count() > 0) ? 
             mocks : new List<MockViewModel>();
 
+        ViewBag.AppId = appId;
         return View(mocks);
     }
 
@@ -57,7 +58,10 @@ public class MocksController : Controller
 
         await _service.AddAsync(model);
 
-        var mocks = await _service.GetAllAsync();
+        // Get filtered mocks based on the application context
+        var mocks = model.ApplicationId.HasValue && model.ApplicationId.Value > 0
+            ? await _service.GetByApplicationIdAsync(model.ApplicationId.Value)
+            : await _service.GetAllAsync();
         var html = await this.RenderViewAsync("_ViewAll", mocks, true);
 
         return Json(new { success = true, message = "Mock added successfully!", html });

@@ -3,83 +3,190 @@
     Layout = "_Layout";
 }
 
-<div class="card-body">
-    <div class="row g-4">
-        <div class="col-12 col-lg-5">
-            <div class="border rounded p-4 bg-white shadow-sm">
-                <h5 class="mb-3">1. Download Sample Excel</h5>
-                <p class="text-muted mb-3">
-                    Download the sample workbook, fill in your Applications, Mocks, and MockScenarios,
-                    then upload the same file.
-                </p>
-                <a class="btn btn-primary" asp-action="Sample" data-skip-loader="true">
-                    <i class="bi bi-file-earmark-excel me-1"></i> Download Sample
-                </a>
-                <div class="mt-3 small text-muted">
-                    Keep the sheet names and headers unchanged.
-                </div>
-            </div>
-
-            <div class="border rounded p-4 bg-white shadow-sm mt-4">
-                <h5 class="mb-3">2. Upload Filled Workbook</h5>
-                <form asp-action="Upload" method="post" enctype="multipart/form-data">
-                    @Html.AntiForgeryToken()
-                    <div class="mb-3">
-                        <label class="form-label">Excel file (.xlsx)</label>
-                        <input type="file" name="excelFile" class="form-control" accept=".xlsx" required />
+<div class="card-body p-3">
+    <div class="row g-3">
+        <div class="row g-3">
+            <!-- Left Column: Actions -->
+            <div class="col-12 col-lg-5">
+                <!-- Step 1: Download Sample -->
+                <div class="border rounded p-3 bg-white shadow-sm mb-3">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-primary rounded-circle me-2" style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">1</span>
+                        <h6 class="mb-0">Download Sample</h6>
                     </div>
-                    <button type="submit" class="btn btn-success">
-                        <i class="bi bi-upload me-1"></i> Upload
-                    </button>
-                </form>
-                <div class="mt-3 small text-muted">
-                    The upload will create missing Applications, then Mocks, then MockScenarios.
+                    <p class="text-muted mb-2 small">
+                        Get a pre-filled Excel template with sample data.
+                    </p>
+                    <a class="btn btn-primary btn-sm w-100" asp-action="Sample" data-skip-loader="true">
+                        <i class="bi bi-file-earmark-excel me-1"></i> Download
+                    </a>
+                </div>
+
+                <!-- Step 2: Fill the Template -->
+                <div class="border rounded p-3 bg-white shadow-sm mb-3">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-success rounded-circle me-2" style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">2</span>
+                        <h6 class="mb-0">Edit Your Data</h6>
+                    </div>
+                    <ul class="text-muted small mb-0 ps-3">
+                        <li>Modify or add rows</li>
+                        <li>Keep headers unchanged</li>
+                        <li>Save as .xlsx</li>
+                    </ul>
+                </div>
+
+                <!-- Step 3: Upload -->
+                <div class="border rounded p-3 bg-white shadow-sm">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="badge bg-warning text-dark rounded-circle me-2" style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem;">3</span>
+                        <h6 class="mb-0">Upload File</h6>
+                    </div>
+                    <form asp-action="Upload" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div class="mb-2">
+                            <input type="file" name="excelFile" class="form-control form-control-sm" accept=".xlsx" required />
+                        </div>
+                        <button type="submit" class="btn btn-success btn-sm w-100">
+                            <i class="bi bi-upload me-1"></i> Upload & Process
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
 
+        <!-- Right Column: Documentation -->
         <div class="col-12 col-lg-7">
-            <div class="border rounded p-4 bg-white shadow-sm">
-                <h5 class="mb-3">Column Guide</h5>
+            <!-- Sheet Structure -->
+            <div class="border rounded p-3 bg-white shadow-sm" style="max-height: 600px; overflow-y: auto;">
+                <h6 class="mb-3"><i class="bi bi-table me-1"></i>Excel Sheet Structure</h6>
 
+                <!-- Applications -->
                 <div class="mb-3">
-                    <h6 class="mb-2">Applications</h6>
-                    <ul class="mb-0">
-                        <li><strong>Name</strong> (required)</li>
-                        <li><strong>IsActive</strong> (optional: TRUE/FALSE)</li>
-                    </ul>
+                    <div class="text-primary mb-1 small fw-semibold">
+                        <i class="bi bi-1-circle me-1"></i> Applications Sheet
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered mb-0 small">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="small">Name</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Application name (unique)</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">IsActive</code></td>
+                                    <td><span class="badge bg-light text-dark">No</span></td>
+                                    <td>TRUE/FALSE (default: TRUE)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
+                <!-- Mocks -->
                 <div class="mb-3">
-                    <h6 class="mb-2">Mocks</h6>
-                    <ul class="mb-0">
-                        <li><strong>ApplicationName</strong> (required)</li>
-                        <li><strong>Name</strong> (required, unique per Application)</li>
-                        <li><strong>Path</strong> (required)</li>
-                        <li><strong>Method</strong> (required, e.g., GET, POST)</li>
-                        <li><strong>IsActive</strong> (optional: TRUE/FALSE)</li>
-                    </ul>
+                    <div class="text-success mb-1 small fw-semibold">
+                        <i class="bi bi-2-circle me-1"></i> Mocks Sheet
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered mb-0 small">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="small">ApplicationName</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Must match an Application</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">Name</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Mock endpoint name</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">Path</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>API path (e.g., /api/users)</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">Method</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>GET, POST, PUT, DELETE</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">IsActive</code></td>
+                                    <td><span class="badge bg-light text-dark">No</span></td>
+                                    <td>TRUE/FALSE (default: TRUE)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
+                <!-- MockScenarios -->
                 <div>
-                    <h6 class="mb-2">MockScenarios</h6>
-                    <ul class="mb-0">
-                        <li><strong>ApplicationName</strong> (required)</li>
-                        <li><strong>MockName</strong> (required, must match Mocks sheet)</li>
-                        <li><strong>ScenarioKey</strong> (required, unique per Mock)</li>
-                        <li><strong>StatusCode</strong> (required)</li>
-                        <li><strong>ResponseJson</strong> (required, valid JSON string)</li>
-                        <li><strong>HeadersJson</strong> (optional, valid JSON string)</li>
-                        <li><strong>IsActive</strong> (optional: TRUE/FALSE)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="border rounded p-4 bg-white shadow-sm mt-4">
-                <h6 class="mb-2">Tips</h6>
-                <div class="text-muted">
-                    Use consistent Application and Mock names across sheets. If a name already exists, the uploader
-                    will skip duplicates and only add missing rows.
+                    <div class="text-warning mb-1 small fw-semibold">
+                        <i class="bi bi-3-circle me-1"></i> MockScenarios Sheet
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-bordered mb-0 small">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Required</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="small">ApplicationName</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Must match an Application</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">MockName</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Must match a Mock</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">ScenarioKey</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Unique key</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">StatusCode</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>HTTP status (200, 404, etc.)</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">ResponseJson</code></td>
+                                    <td><span class="badge bg-primary">Yes</span></td>
+                                    <td>Valid JSON response</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">HeadersJson</code></td>
+                                    <td><span class="badge bg-light text-dark">No</span></td>
+                                    <td>Optional JSON headers</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="small">IsActive</code></td>
+                                    <td><span class="badge bg-light text-dark">No</span></td>
+                                    <td>TRUE/FALSE (default: TRUE)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

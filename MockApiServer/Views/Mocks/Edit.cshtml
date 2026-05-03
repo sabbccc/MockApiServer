@@ -1,7 +1,8 @@
 ﻿@model MockApiServer.Models.ViewModels.MockViewModel
 
 <form asp-action="Edit" method="post" id="editMockForm">
-    <input type="hidden" asp-for="ApplicationId" value="@ViewBag.ApplicationId" />
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ApplicationId" />
 
     <div class="row">
         <!-- Row 1: Application Selection -->
