@@ -84,6 +84,14 @@ namespace MockApiServer.Extensions
             return services;
         }
 
+        public static IServiceCollection AddUrlBrowsing(
+            this IServiceCollection services)
+        {
+            services.AddHostedService<UrlBrowsingHostedService>();
+
+            return services;
+        }
+
         public static IServiceCollection AddMvcServices(
             this IServiceCollection services,
             IHostEnvironment environment)

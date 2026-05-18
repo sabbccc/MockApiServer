@@ -18,7 +18,8 @@ builder.Services
     .AddAuthorization()
     .AddDatabase(builder.Configuration)
     .AddRepositories()
-    .AddApplicationServices();
+    .AddApplicationServices()
+    .AddUrlBrowsing();
 
 builder.Services.AddHealthChecks();
 
